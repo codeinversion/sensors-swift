@@ -4,7 +4,7 @@
 //
 //  https://github.com/kinetic-fit/sensors-swift
 //
-//  Copyright © 2016 Kinetic. All rights reserved.
+//  Copyright © 2017 Kinetic. All rights reserved.
 //
 
 import UIKit
@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Customize what services you want to scan for
         SensorManager.instance.setServicesToScanFor([
@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SensorManager.instance.addServiceTypes([DeviceInformationService.self])
         
         // Set the scan mode (see documentation)
-        SensorManager.instance.scanMode = .Aggressive
+        SensorManager.instance.state = .aggressiveScan
         
         // Capture SwiftySensors log messages and print them to the console. You can inject your own logging system here if desired.
         SensorManager.logSensorMessage = { message in
@@ -35,26 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         return true
-    }
-    
-    func applicationWillResignActive(application: UIApplication) {
-        
-    }
-    
-    func applicationDidEnterBackground(application: UIApplication) {
-        
-    }
-    
-    func applicationWillEnterForeground(application: UIApplication) {
-        
-    }
-    
-    func applicationDidBecomeActive(application: UIApplication) {
-        
-    }
-    
-    func applicationWillTerminate(application: UIApplication) {
-        
     }
     
 }

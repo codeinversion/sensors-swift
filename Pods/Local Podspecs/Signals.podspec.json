@@ -1,6 +1,6 @@
 {
   "name": "Signals",
-  "version": "2.3.0",
+  "version": "5.0.0",
   "license": "MIT",
   "summary": "Elegant eventing",
   "homepage": "https://github.com/artman/Signals",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/artman/Signals.git",
-    "tag": "2.3.0"
+    "tag": "5.0.0"
   },
   "platforms": {
     "ios": "8.0",

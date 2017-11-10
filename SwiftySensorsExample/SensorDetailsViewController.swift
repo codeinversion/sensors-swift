@@ -4,7 +4,7 @@
 //
 //  https://github.com/kinetic-fit/sensors-swift
 //
-//  Copyright © 2016 Kinetic. All rights reserved.
+//  Copyright © 2017 Kinetic. All rights reserved.
 //
 
 import UIKit
@@ -18,21 +18,20 @@ class SensorDetailsViewController: UIViewController {
     @IBOutlet var connectButton: UIButton!
     @IBOutlet var tableView: UITableView!
     
-    private var services: [Service] = []
+    fileprivate var services: [Service] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sensor.onServiceDiscovered.listen(self) { [weak self] sensor, service in
-            guard let s = self else { return }
-            s.rebuildData()
+        sensor.onServiceDiscovered.subscribe(on: self) { [weak self] sensor, service in
+            self?.rebuildData()
         }
-        sensor.onStateChanged.listen(self) { [weak self] sensor in
+        sensor.onStateChanged.subscribe(on: self) { [weak self] sensor in
             self?.updateConnectButton()
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         nameLabel.text = sensor.peripheral.name
@@ -41,37 +40,44 @@ class SensorDetailsViewController: UIViewController {
         rebuildData()
     }
     
-    private func rebuildData() {
+    fileprivate func rebuildData() {
         services = Array(sensor.services.values)
         tableView.reloadData()
     }
     
-    private func updateConnectButton() {
+    fileprivate func updateConnectButton() {
         switch sensor.peripheral.state {
-        case .Connected:
-            connectButton.setTitle("Connected", forState: .Normal)
-            connectButton.enabled = true
-        case .Connecting:
-            connectButton.setTitle("Connecting", forState: .Normal)
-            connectButton.enabled = false
-        case .Disconnected:
-            connectButton.setTitle("Disconnected", forState: .Normal)
-            connectButton.enabled = true
+        case .connected:
+            connectButton.setTitle("Connected", for: UIControlState())
+            connectButton.isEnabled = true
+        case .connecting:
+            connectButton.setTitle("Connecting", for: UIControlState())
+            connectButton.isEnabled = false
+        case .disconnected:
+            connectButton.setTitle("Disconnected", for: UIControlState())
+            connectButton.isEnabled = true
             
             rebuildData()
-        case .Disconnecting:
-            connectButton.setTitle("Disconnecting", forState: .Normal)
-            connectButton.enabled = false
+        case .disconnecting:
+            connectButton.setTitle("Disconnecting", for: UIControlState())
+            connectButton.isEnabled = false
         }
     }
     
-    @IBAction func connectButtonHandler(sender: AnyObject) {
-        if sensor.peripheral.state == .Connected {
+    @IBAction func connectButtonHandler(_ sender: AnyObject) {
+        if sensor.peripheral.state == .connected {
             SensorManager.instance.disconnectFromSensor(sensor)
-        } else if sensor.peripheral.state == .Disconnected {
+        } else if sensor.peripheral.state == .disconnected {
             SensorManager.instance.connectToSensor(sensor)
         }
-            
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let serviceDetails = segue.destination as? ServiceDetailsViewController {
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            if indexPath.row >= services.count { return }
+            serviceDetails.service = services[indexPath.row]
+        }
     }
 }
 
@@ -79,15 +85,17 @@ class SensorDetailsViewController: UIViewController {
 
 extension SensorDetailsViewController: UITableViewDataSource {
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let serviceCell = tableView.dequeueReusableCellWithIdentifier("ServiceCell")!
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let serviceCell = tableView.dequeueReusableCell(withIdentifier: "ServiceCell")!
         let service = services[indexPath.row]
         
-        serviceCell.textLabel?.text = "\(service)"
+        serviceCell.textLabel?.text = "\(service)".components(separatedBy: ".").last
         return serviceCell
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return services.count
     }
+    
 }
+

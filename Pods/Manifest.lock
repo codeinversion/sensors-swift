@@ -1,12 +1,22 @@
 PODS:
-  - Signals (3.0.0)
+  - Signals (5.0.0)
 
 DEPENDENCIES:
-  - Signals (~> 3.0)
+  - Signals (from `https://github.com/artman/Signals.git`, branch `swift4`)
+
+EXTERNAL SOURCES:
+  Signals:
+    :branch: swift4
+    :git: https://github.com/artman/Signals.git
+
+CHECKOUT OPTIONS:
+  Signals:
+    :commit: ba58b97dc37bf2a2216b36c5fce151fbe1acb99e
+    :git: https://github.com/artman/Signals.git
 
 SPEC CHECKSUMS:
-  Signals: 12c4fb55c7a0bd047f50afa7394939870c90333a
+  Signals: 49dac8bbf4ac6d102615f1c6a84940e906812685
 
-PODFILE CHECKSUM: 0dd8e9145aa1228b9aec727c1e7e3c7965789ed4
+PODFILE CHECKSUM: 2840ef21d7c4abf6c79249db83fd2dacda7e7f73
 
-COCOAPODS: 1.0.0.beta.8
+COCOAPODS: 1.4.0.beta.1

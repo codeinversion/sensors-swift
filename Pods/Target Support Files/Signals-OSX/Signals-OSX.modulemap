@@ -1,6 +1,0 @@
-framework module Signals {
-  umbrella header "Signals-OSX-umbrella.h"
-
-  export *
-  module * { export * }
-}

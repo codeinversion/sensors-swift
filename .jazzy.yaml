@@ -1,0 +1,2 @@
+xcodebuild_arguments:
+  ["-workspace", "SwiftySensors.xcworkspace", "-scheme", "SwiftySensors iOS"]
