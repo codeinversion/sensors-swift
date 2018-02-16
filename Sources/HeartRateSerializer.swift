@@ -37,15 +37,18 @@ open class HeartRateSerializer {
     open static func readMeasurement(_ data: Data) -> MeasurementData {
         var measurement = MeasurementData()
         
-        let bytes = (data as NSData).bytes.bindMemory(to: UInt8.self, capacity: data.count)
+        let bytes = data.map { $0 }
+        if bytes.count < 2 {
+            return measurement
+        }
+        
         var index: Int = 0
-        let flags = bytes[index];
-        index += 1
+        let flags = bytes[index++=];
         
         if flags & 0x01 == 0 {
-            measurement.heartRate = UInt16(bytes[index])
-        } else {
-            measurement.heartRate = ((UInt16)(bytes[index++=])) | ((UInt16)(bytes[index++=])) << 8
+            measurement.heartRate = UInt16(bytes[index++=])
+        } else if bytes.count > 2 {
+            measurement.heartRate = UInt16(bytes[index++=]) | UInt16(bytes[index++=]) << 8
         }
         
         let contactStatusBits = (flags | 0x06) >> 1
@@ -54,25 +57,24 @@ open class HeartRateSerializer {
         } else if contactStatusBits == 3 {
             measurement.contactStatus = .detected
         }
-        if flags & 0x08 == 0x08 {
-            measurement.energyExpended = ((UInt16)(bytes[index++=])) | ((UInt16)(bytes[index++=])) << 8
+        if flags & 0x08 == 0x08 && bytes.count > 4 {
+            measurement.energyExpended = UInt16(bytes[index++=]) | UInt16(bytes[index++=]) << 8
         }
-        if flags & 0x10 == 0x10 {
-            measurement.rrInterval = ((UInt16)(bytes[index++=])) | ((UInt16)(bytes[index++=])) << 8
+        if flags & 0x10 == 0x10 && bytes.count > 6 {
+            measurement.rrInterval = UInt16(bytes[index++=]) | UInt16(bytes[index++=]) << 8
         }
         return measurement
     }
     
     
     open static func readSensorLocation(_ data: Data) -> BodySensorLocation? {
-        let bytes = (data as NSData).bytes.bindMemory(to: UInt8.self, capacity: data.count)
+        let bytes = data.map { $0 }
+        if bytes.count == 0 { return nil }
         return BodySensorLocation(rawValue: bytes[0])
     }
     
     open static func writeResetEnergyExpended() -> [UInt8] {
-        return [
-            0x01
-        ]
+        return [0x01]
     }
     
 }

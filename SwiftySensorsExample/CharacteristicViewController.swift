@@ -25,7 +25,7 @@ class CharacteristicViewController: UIViewController {
         
         refreshValue()
         
-        characteristic.onValueUpdated.subscribe(on: self) { [weak self] characteristic in
+        characteristic.onValueUpdated.subscribe(with: self) { [weak self] characteristic in
             self?.refreshValue()
         }
     }

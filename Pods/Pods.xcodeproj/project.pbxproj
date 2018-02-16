@@ -7,25 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		005002C5A9D5CA4A55FF7420F6CB6F7C /* Pods-SwiftySensors iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C4467A8EBA4D602E2FC324728280D53D /* Pods-SwiftySensors iOS-dummy.m */; };
-		03574AC6B4AE246C524C4209254DBCD3 /* UIControl+Signals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EACC8B77B8886A48F7BAE542B93E98A /* UIControl+Signals.swift */; };
-		04137069B7E72B8815C3348A8E87CD79 /* Signals-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B09B8B9CE9603F72B6585A9A2798C6E /* Signals-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B9FD11EBAC069B95651CA377DF9987A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDAA23DDA8E082FC77E38FA01601C8F /* Cocoa.framework */; };
-		3F7505883B9A7C4258C6B452319124F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8E2D632CADFEBE217900FD1D4F3ABF /* Foundation.framework */; };
-		4F3BC53753F1489E664D599BC3AD9079 /* Pods-SwiftySensors iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86005356CA90DE437231DB216D1303C5 /* Pods-SwiftySensors iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54B6E700EDCED5EFF6D759218F4E40DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8E2D632CADFEBE217900FD1D4F3ABF /* Foundation.framework */; };
-		5649049E0A49F3BC52B133F5AB65B537 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8E2D632CADFEBE217900FD1D4F3ABF /* Foundation.framework */; };
-		59763AE1CB2844E53B7E3F9D313DDFCB /* Pods-SwiftySensorsExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99DE6EA8F9114D57FF31A1DCC12C0A /* Pods-SwiftySensorsExample-dummy.m */; };
-		5D5E4CD86D19CBDD7D4C3A28F999928A /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931C3E2AD82B7AC142C7235F32CE4D69 /* Signal.swift */; };
-		691DBA84D32BA2EF914FDD7B83BFA407 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931C3E2AD82B7AC142C7235F32CE4D69 /* Signal.swift */; };
-		8F83A4F7B6447284F26639CFB3CBCB3B /* Pods-SwiftySensorsExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2125F70BB0D80C84F99A4B5A7161673B /* Pods-SwiftySensorsExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9555ADE194B5401F9C5F0729AFE8640D /* Signals-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9D4BD3C3534B60F43A92AB196A2370 /* Signals-macOS-dummy.m */; };
-		9874E25A3111796ACDB267E7FE2B5D35 /* Pods-SwiftySensors macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 956C443BA930AF16F7D2CFDB5E3C20B2 /* Pods-SwiftySensors macOS-dummy.m */; };
-		A435D9E04F7DA3C3257D727CEF8846F4 /* Signals-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 542CAA59FFF12AE3BBD19918DF6C5193 /* Signals-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A60A1C4BCD16F9C1F67ECB39D9D34082 /* Pods-SwiftySensors macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 222C54032860460B9544C29BDD2FDA03 /* Pods-SwiftySensors macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD32B3319066B31E254DA3CF9340F96E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDAA23DDA8E082FC77E38FA01601C8F /* Cocoa.framework */; };
-		CC908A2A7424D553FD8D55DE09096521 /* AssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE39DA728FF665B10EBF89ABECAF2C1 /* AssociatedObject.swift */; };
-		EDA6E5268A27EBFF6878A049CF21931E /* Signals-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D15AA8A3248CF95F9DEDACD8CD70674D /* Signals-iOS-dummy.m */; };
+		005002C5A9D5CA4A55FF7420F6CB6F7C /* Pods-SwiftySensors iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 425B782D2618CE06F84E611E089BB564 /* Pods-SwiftySensors iOS-dummy.m */; };
+		03574AC6B4AE246C524C4209254DBCD3 /* UIControl+Signals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBAC2BB71C9B2B4B280C0DD4584528 /* UIControl+Signals.swift */; };
+		04137069B7E72B8815C3348A8E87CD79 /* Signals-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F12D380DEE184F9BCC135F8D3766D5B3 /* Signals-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0713B2A03991054ED1519D3515C2AA05 /* Signals-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF71CBFD63692747BF0BD7D675B7F681 /* Signals-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11E49484823CEB246868E5983FC3B1D4 /* Pods-SwiftySensors tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A2D637604C33E2C0C4C8A39A4C5361FA /* Pods-SwiftySensors tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B997FE46878481C7C80AD96E918A280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38A88E0776EAF5001831CAEFF93C9A0 /* Foundation.framework */; };
+		3465A36E2E4F189B9EF28999A2B33E4D /* UIControl+Signals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBAC2BB71C9B2B4B280C0DD4584528 /* UIControl+Signals.swift */; };
+		3B9FD11EBAC069B95651CA377DF9987A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB56E35108A1FCAA1F5604A02FFCDC5 /* Cocoa.framework */; };
+		3F7505883B9A7C4258C6B452319124F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7461AAFB7A771BCEC6E4E09204991FB5 /* Foundation.framework */; };
+		4F3BC53753F1489E664D599BC3AD9079 /* Pods-SwiftySensors iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 853EFF8A323D18DC60537120377AC84A /* Pods-SwiftySensors iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54146FAC32553CAE622BACE9BDD0A562 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38A88E0776EAF5001831CAEFF93C9A0 /* Foundation.framework */; };
+		54B6E700EDCED5EFF6D759218F4E40DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7461AAFB7A771BCEC6E4E09204991FB5 /* Foundation.framework */; };
+		5649049E0A49F3BC52B133F5AB65B537 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7461AAFB7A771BCEC6E4E09204991FB5 /* Foundation.framework */; };
+		59763AE1CB2844E53B7E3F9D313DDFCB /* Pods-SwiftySensorsExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D52C8DF4CDA23F85D0F0C94741D9E984 /* Pods-SwiftySensorsExample-dummy.m */; };
+		5D5E4CD86D19CBDD7D4C3A28F999928A /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A0CB6771821BC756722B04732C4BC /* Signal.swift */; };
+		681792405B21AA0252369C26B627E413 /* AssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5416B65BC70B930E89DC5BE8916F42 /* AssociatedObject.swift */; };
+		691DBA84D32BA2EF914FDD7B83BFA407 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A0CB6771821BC756722B04732C4BC /* Signal.swift */; };
+		8F83A4F7B6447284F26639CFB3CBCB3B /* Pods-SwiftySensorsExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B3521ABD347584140173E30DEBBE5D3 /* Pods-SwiftySensorsExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9555ADE194B5401F9C5F0729AFE8640D /* Signals-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A45D9AF73C90BC712EF55FDA38F418C4 /* Signals-macOS-dummy.m */; };
+		9874E25A3111796ACDB267E7FE2B5D35 /* Pods-SwiftySensors macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F960F34022BB964F3BD73C8979C5CB7 /* Pods-SwiftySensors macOS-dummy.m */; };
+		A435D9E04F7DA3C3257D727CEF8846F4 /* Signals-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4873D8BE0F3B08AEB61D0E6C80D91502 /* Signals-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A60A1C4BCD16F9C1F67ECB39D9D34082 /* Pods-SwiftySensors macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 932816A19C161D4FEF54A302DBDD0EB8 /* Pods-SwiftySensors macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD32B3319066B31E254DA3CF9340F96E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB56E35108A1FCAA1F5604A02FFCDC5 /* Cocoa.framework */; };
+		B34201296D7CDC1D5CD87D35BA38D79F /* Pods-SwiftySensors tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7830D0BC27380D1D9D19BD6A70F4896C /* Pods-SwiftySensors tvOS-dummy.m */; };
+		CC908A2A7424D553FD8D55DE09096521 /* AssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5416B65BC70B930E89DC5BE8916F42 /* AssociatedObject.swift */; };
+		D8A6DF35D53BD223E8BC321434FFB301 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A0CB6771821BC756722B04732C4BC /* Signal.swift */; };
+		EDA6E5268A27EBFF6878A049CF21931E /* Signals-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B95BFF932B41C9BF6ABE0EC10D4A47 /* Signals-iOS-dummy.m */; };
+		FD2F239F38D647A6AE49FB34484AD478 /* Signals-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0427C6B1EA7111DB5C6D349D43A550D4 /* Signals-tvOS-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +52,13 @@
 			remoteGlobalIDString = 0043D46785DCF8E63B70C4A1A4B91404;
 			remoteInfo = "Signals-iOS";
 		};
+		B03B3341A721E0B32EBA66BB9A34DCC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1628CC0CE707EC41CAD7741348755865;
+			remoteInfo = "Signals-tvOS";
+		};
 		C2CC5ACAA919D1C64782CBF9E303C222 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -53,65 +69,99 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04CCFFD83453F3F0EA0D27DC33C791AE /* Pods-SwiftySensors macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftySensors macOS.modulemap"; sourceTree = "<group>"; };
-		0B805694FB33B178DC24D360D53B4FCA /* Pods-SwiftySensorsExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftySensorsExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		12EF8DFC4680B3E667E203F349B8AF68 /* Pods-SwiftySensors macOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftySensors macOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1359FBCA2E1B222619C561C2E87C73A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1838BE7DC9D7D6648A9130C17C9FDA2C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1DB9B56FBBE46EFA05B22425DEB80B9C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2125F70BB0D80C84F99A4B5A7161673B /* Pods-SwiftySensorsExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftySensorsExample-umbrella.h"; sourceTree = "<group>"; };
-		222C54032860460B9544C29BDD2FDA03 /* Pods-SwiftySensors macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftySensors macOS-umbrella.h"; sourceTree = "<group>"; };
-		29F349C9A25CB35A6C01900A27D851B7 /* Pods-SwiftySensorsExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySensorsExample-resources.sh"; sourceTree = "<group>"; };
-		3794CAFAF16A7379CE7EA6B55EE16F7A /* Pods-SwiftySensorsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySensorsExample.debug.xcconfig"; sourceTree = "<group>"; };
-		3EACC8B77B8886A48F7BAE542B93E98A /* UIControl+Signals.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIControl+Signals.swift"; path = "Signals/ios/UIControl+Signals.swift"; sourceTree = "<group>"; };
-		40D6A2541A9999B49ABA7628DB1D6785 /* Signals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Signals.framework; path = "Signals-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		46C2A34653C1135445E4256B36D3A5A2 /* Pods-SwiftySensors iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySensors iOS.release.xcconfig"; sourceTree = "<group>"; };
-		498F89372B7A27F47A56584372C1F839 /* Pods-SwiftySensors macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySensors macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		542CAA59FFF12AE3BBD19918DF6C5193 /* Signals-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Signals-macOS-umbrella.h"; path = "../Signals-macOS/Signals-macOS-umbrella.h"; sourceTree = "<group>"; };
-		61BC389F6D3AADFAA89647C9536D6E92 /* Signals-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Signals-macOS.xcconfig"; path = "../Signals-macOS/Signals-macOS.xcconfig"; sourceTree = "<group>"; };
-		68026CA0BAFA99D75CEEA46C54333E11 /* Pods_SwiftySensors_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftySensors_macOS.framework; path = "Pods-SwiftySensors macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		686C59A74570902E6B02456183DFB592 /* Pods-SwiftySensorsExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftySensorsExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6A73F7F1213D98CA22C1FC01A6EBC096 /* Pods-SwiftySensors macOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySensors macOS-resources.sh"; sourceTree = "<group>"; };
-		6E55FA7E8676FF30182A012CF1E5399A /* Pods_SwiftySensors_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftySensors_iOS.framework; path = "Pods-SwiftySensors iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E73049AD816BE7D60C56D112CECAB34 /* Pods-SwiftySensors iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftySensors iOS.modulemap"; sourceTree = "<group>"; };
-		6FE39DA728FF665B10EBF89ABECAF2C1 /* AssociatedObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssociatedObject.swift; path = Signals/ios/AssociatedObject.swift; sourceTree = "<group>"; };
-		85CB5BD6FE2A6B2BF745CBF773F0D4CC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Signals-macOS/Info.plist"; sourceTree = "<group>"; };
-		86005356CA90DE437231DB216D1303C5 /* Pods-SwiftySensors iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftySensors iOS-umbrella.h"; sourceTree = "<group>"; };
-		888D70FC9FF73A3134E07CFA9AE193A2 /* Pods-SwiftySensors iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftySensors iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8B8B425F88137D93D6A11371F16B954D /* Pods-SwiftySensorsExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySensorsExample-frameworks.sh"; sourceTree = "<group>"; };
-		931C3E2AD82B7AC142C7235F32CE4D69 /* Signal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Signal.swift; path = Signals/Signal.swift; sourceTree = "<group>"; };
+		0427C6B1EA7111DB5C6D349D43A550D4 /* Signals-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Signals-tvOS-dummy.m"; path = "../Signals-tvOS/Signals-tvOS-dummy.m"; sourceTree = "<group>"; };
+		094932D89CCB010E4C4D40D0E40C2F81 /* Pods-SwiftySensorsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySensorsExample.debug.xcconfig"; sourceTree = "<group>"; };
+		109660AEA2424594437DE389FA8B096C /* Pods-SwiftySensors tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftySensors tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		1582971CD544B12CAEBE6DAE6D05AD43 /* Pods-SwiftySensors tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySensors tvOS-resources.sh"; sourceTree = "<group>"; };
+		1B3521ABD347584140173E30DEBBE5D3 /* Pods-SwiftySensorsExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftySensorsExample-umbrella.h"; sourceTree = "<group>"; };
+		1BA12FBE08360C135314586960A9BE88 /* Signals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Signals.framework; path = "Signals-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		274CF81F08B79E4C6315F24DE1DD4BB4 /* Pods-SwiftySensors iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySensors iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		2F198510D29027652F11042287AEE012 /* Pods_SwiftySensorsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftySensorsExample.framework; path = "Pods-SwiftySensorsExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		302A0CB6771821BC756722B04732C4BC /* Signal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Signal.swift; path = Signals/Signal.swift; sourceTree = "<group>"; };
+		305E1EFF92E7178144DB6943DFAB59C9 /* Pods-SwiftySensors macOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySensors macOS-resources.sh"; sourceTree = "<group>"; };
+		30FAA9D557187A55B01E14CCAC0F6399 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Signals-macOS/Info.plist"; sourceTree = "<group>"; };
+		3B2EDF547CD90B458C00AFF2455C651B /* Pods-SwiftySensors tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySensors tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		3D66E01D00A6B5498CE7162457DC4F11 /* Pods-SwiftySensorsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySensorsExample.release.xcconfig"; sourceTree = "<group>"; };
+		3DBD2D16B09F84D6ABDE56784607488B /* Pods-SwiftySensors iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftySensors iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		40BCA146343E5A45A531A6617C735374 /* Pods_SwiftySensors_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftySensors_iOS.framework; path = "Pods-SwiftySensors iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		425B782D2618CE06F84E611E089BB564 /* Pods-SwiftySensors iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftySensors iOS-dummy.m"; sourceTree = "<group>"; };
+		4873D8BE0F3B08AEB61D0E6C80D91502 /* Signals-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Signals-macOS-umbrella.h"; path = "../Signals-macOS/Signals-macOS-umbrella.h"; sourceTree = "<group>"; };
+		4F960F34022BB964F3BD73C8979C5CB7 /* Pods-SwiftySensors macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftySensors macOS-dummy.m"; sourceTree = "<group>"; };
+		545CB5476AC9763F999EAFF368FB0119 /* Signals-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "Signals-tvOS.modulemap"; path = "../Signals-tvOS/Signals-tvOS.modulemap"; sourceTree = "<group>"; };
+		5D659F9FE4DB29F93D4D5927970A92F1 /* Pods-SwiftySensors iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftySensors iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		5E4C70616E7F34FCB408C58F6D4BC639 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Signals-tvOS/Info.plist"; sourceTree = "<group>"; };
+		66E310D3A4AB4903832467DF2D23D515 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FAD8F273493125B3755FFEA32DFBB44 /* Signals-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Signals-tvOS.xcconfig"; path = "../Signals-tvOS/Signals-tvOS.xcconfig"; sourceTree = "<group>"; };
+		74447C06B1AAA36C434A9EE0CC68D99E /* Pods-SwiftySensors macOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftySensors macOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		7461AAFB7A771BCEC6E4E09204991FB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7830D0BC27380D1D9D19BD6A70F4896C /* Pods-SwiftySensors tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftySensors tvOS-dummy.m"; sourceTree = "<group>"; };
+		7905763F8F7D3506F62DF7E91A0B2D0B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D701DDC13CCA7729E1A622609D29558 /* Pods-SwiftySensors iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftySensors iOS.modulemap"; sourceTree = "<group>"; };
+		83FAEF9231D326ED9D5CF64CE1D0FF83 /* Pods-SwiftySensors iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySensors iOS-resources.sh"; sourceTree = "<group>"; };
+		853EFF8A323D18DC60537120377AC84A /* Pods-SwiftySensors iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftySensors iOS-umbrella.h"; sourceTree = "<group>"; };
+		85D81565BB2F4F21F258EBD3EC49C5C8 /* Signals-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Signals-iOS.xcconfig"; sourceTree = "<group>"; };
+		8CA120C4CD7FED8719A230FCC47469C1 /* Pods-SwiftySensors tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftySensors tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8EAE3F3C9BB65C4CE25A41B006C7A7DB /* Pods-SwiftySensors tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySensors tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8F5416B65BC70B930E89DC5BE8916F42 /* AssociatedObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssociatedObject.swift; path = Signals/ios/AssociatedObject.swift; sourceTree = "<group>"; };
+		926B51BDD060EFD268ABF9E6D678ACB0 /* Pods-SwiftySensorsExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySensorsExample-frameworks.sh"; sourceTree = "<group>"; };
+		932816A19C161D4FEF54A302DBDD0EB8 /* Pods-SwiftySensors macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftySensors macOS-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		956C443BA930AF16F7D2CFDB5E3C20B2 /* Pods-SwiftySensors macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftySensors macOS-dummy.m"; sourceTree = "<group>"; };
-		9579014BD43E78621B0A64702C8ADE81 /* Signals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Signals.framework; path = "Signals-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9ACA3DF187CFA1B4577AB92269588D5D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B09B8B9CE9603F72B6585A9A2798C6E /* Signals-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Signals-iOS-umbrella.h"; sourceTree = "<group>"; };
-		A2F10ED47CEAAD5121EBAE0B549B919B /* Pods-SwiftySensors iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySensors iOS-resources.sh"; sourceTree = "<group>"; };
-		A968A1D52CDE861CC810282E09463390 /* Pods-SwiftySensors macOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftySensors macOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		BA99DE6EA8F9114D57FF31A1DCC12C0A /* Pods-SwiftySensorsExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftySensorsExample-dummy.m"; sourceTree = "<group>"; };
-		C4467A8EBA4D602E2FC324728280D53D /* Pods-SwiftySensors iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftySensors iOS-dummy.m"; sourceTree = "<group>"; };
-		CDDAA23DDA8E082FC77E38FA01601C8F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		CFA4AAC78D7F5664F3C5167FC6E7A991 /* Pods_SwiftySensorsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftySensorsExample.framework; path = "Pods-SwiftySensorsExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFABA277E3780B28D2247B79504669FD /* Pods-SwiftySensors iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftySensors iOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		D15AA8A3248CF95F9DEDACD8CD70674D /* Signals-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Signals-iOS-dummy.m"; sourceTree = "<group>"; };
-		D25B1B849A97E0835D9AA7A25099A71D /* Signals-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Signals-iOS-prefix.pch"; sourceTree = "<group>"; };
-		D872ED1CFDED2BE560CC80345436FBE2 /* Pods-SwiftySensorsExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftySensorsExample.modulemap"; sourceTree = "<group>"; };
-		D91BF9A29BA14D2289BBC6D052981817 /* Signals-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Signals-macOS-prefix.pch"; path = "../Signals-macOS/Signals-macOS-prefix.pch"; sourceTree = "<group>"; };
-		D94B7643C23AE58B0410C1203DD20A54 /* Signals-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Signals-iOS.modulemap"; sourceTree = "<group>"; };
-		DB8E2D632CADFEBE217900FD1D4F3ABF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DBEC4CFB2A2B9ABB3BB198C2EBACE3DB /* Pods-SwiftySensorsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySensorsExample.release.xcconfig"; sourceTree = "<group>"; };
-		E373B1F41D8F4B930D1F9EE883FA4AF5 /* Pods-SwiftySensors iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySensors iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		E6F9F17EACDCB024ACD1F02A2760F5CC /* Pods-SwiftySensors macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySensors macOS.release.xcconfig"; sourceTree = "<group>"; };
-		EC9D4BD3C3534B60F43A92AB196A2370 /* Signals-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Signals-macOS-dummy.m"; path = "../Signals-macOS/Signals-macOS-dummy.m"; sourceTree = "<group>"; };
-		F2826F8C87505A347A2C9A6F82281AED /* Signals-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "Signals-macOS.modulemap"; path = "../Signals-macOS/Signals-macOS.modulemap"; sourceTree = "<group>"; };
-		F9DF6081CAD537D53740D95B78A677B5 /* Signals-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Signals-iOS.xcconfig"; sourceTree = "<group>"; };
+		9B0DF282BEFF0F8C90A87E230DC3269F /* Pods-SwiftySensors tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftySensors tvOS.modulemap"; sourceTree = "<group>"; };
+		9B288B0E2A8964C45EF0D993BF2C915B /* Signals-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Signals-macOS-prefix.pch"; path = "../Signals-macOS/Signals-macOS-prefix.pch"; sourceTree = "<group>"; };
+		9B5B5C1E0FB24CDD0F8E22DB5F9FD3BC /* Signals-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Signals-macOS.xcconfig"; path = "../Signals-macOS/Signals-macOS.xcconfig"; sourceTree = "<group>"; };
+		A2B95BFF932B41C9BF6ABE0EC10D4A47 /* Signals-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Signals-iOS-dummy.m"; sourceTree = "<group>"; };
+		A2D637604C33E2C0C4C8A39A4C5361FA /* Pods-SwiftySensors tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftySensors tvOS-umbrella.h"; sourceTree = "<group>"; };
+		A3357FA8C30128AD1737EA07FEB1EEA1 /* Signals-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Signals-iOS-prefix.pch"; sourceTree = "<group>"; };
+		A45D9AF73C90BC712EF55FDA38F418C4 /* Signals-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Signals-macOS-dummy.m"; path = "../Signals-macOS/Signals-macOS-dummy.m"; sourceTree = "<group>"; };
+		A4634B98663BFA95D5B466BC584C2CBA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A96748181FE63677601179085FD35B7C /* Pods-SwiftySensors macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySensors macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		AD447555B8398C06BC116A0659270238 /* Pods_SwiftySensors_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftySensors_tvOS.framework; path = "Pods-SwiftySensors tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE5B31342F4D0A3D095886D93B8E934C /* Pods-SwiftySensorsExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftySensorsExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AF71CBFD63692747BF0BD7D675B7F681 /* Signals-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Signals-tvOS-umbrella.h"; path = "../Signals-tvOS/Signals-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		B38A88E0776EAF5001831CAEFF93C9A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B58C3DE3AF077C5878744C27D64BCB26 /* Pods-SwiftySensorsExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftySensorsExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		B827A68F8DD03165F9CD4F855D05A2CC /* Signals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Signals.framework; path = "Signals-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE727C196B6519E78690F7C2B5FCBD9 /* Pods-SwiftySensorsExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySensorsExample-resources.sh"; sourceTree = "<group>"; };
+		BCB04C78C39A494039801095EC4552F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2DBAC2BB71C9B2B4B280C0DD4584528 /* UIControl+Signals.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIControl+Signals.swift"; path = "Signals/ios/UIControl+Signals.swift"; sourceTree = "<group>"; };
+		C376273A1DE9845654E551034CF5BE77 /* Pods-SwiftySensors macOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftySensors macOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CDB0C6F4DE0E29B044FF4B623C6945B7 /* Signals-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Signals-tvOS-prefix.pch"; path = "../Signals-tvOS/Signals-tvOS-prefix.pch"; sourceTree = "<group>"; };
+		CFB56E35108A1FCAA1F5604A02FFCDC5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		D52C8DF4CDA23F85D0F0C94741D9E984 /* Pods-SwiftySensorsExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftySensorsExample-dummy.m"; sourceTree = "<group>"; };
+		D65B4842196E335871CB3D653551C636 /* Signals-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Signals-iOS.modulemap"; sourceTree = "<group>"; };
+		D8161DB0B6E4518CB3E98EC8DD1B3811 /* Signals-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "Signals-macOS.modulemap"; path = "../Signals-macOS/Signals-macOS.modulemap"; sourceTree = "<group>"; };
+		E2207B8D0D24B9483E1F4E37AB1E1361 /* Pods-SwiftySensors iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySensors iOS.release.xcconfig"; sourceTree = "<group>"; };
+		E5A89DB477D0343423CBC6DFA3DCDD5D /* Signals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Signals.framework; path = "Signals-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E898BDA62F0C3A544DF1545F3502C7EA /* Pods_SwiftySensors_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftySensors_macOS.framework; path = "Pods-SwiftySensors macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12D380DEE184F9BCC135F8D3766D5B3 /* Signals-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Signals-iOS-umbrella.h"; sourceTree = "<group>"; };
+		F46F507D299D7EA3905802392C31BF3E /* Pods-SwiftySensorsExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftySensorsExample.modulemap"; sourceTree = "<group>"; };
+		F606BFE2D0712E3D291A8308B1CBA0EB /* Pods-SwiftySensors macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySensors macOS.release.xcconfig"; sourceTree = "<group>"; };
+		F8D0DC7997013740A28CAC1476C6C9A1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE7D1191C07081478067F235785D809D /* Pods-SwiftySensors macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftySensors macOS.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2BFF548B61127956756FE350A0290BDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54146FAC32553CAE622BACE9BDD0A562 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6478DE90C79A8E0A8637C10F80591E87 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5649049E0A49F3BC52B133F5AB65B537 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6F109D3D7D695FB7AC91DAD1FBAFCCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B997FE46878481C7C80AD96E918A280 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,156 +203,199 @@
 		02F4D147FA21E58CBC8F9E26EEF6143F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0D866736E43ECB8E99262B7B8BF1F65A /* Signals */,
+				F924AC11883577D80A6D6E501FC1121D /* Signals */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		0D866736E43ECB8E99262B7B8BF1F65A /* Signals */ = {
+		0A8BE2FFB7F6DACC5D6261AD1F57CA87 /* Pods-SwiftySensorsExample */ = {
 			isa = PBXGroup;
 			children = (
-				6FE39DA728FF665B10EBF89ABECAF2C1 /* AssociatedObject.swift */,
-				931C3E2AD82B7AC142C7235F32CE4D69 /* Signal.swift */,
-				3EACC8B77B8886A48F7BAE542B93E98A /* UIControl+Signals.swift */,
-				A533EE8F46D2D67F0B6787610BA84629 /* Support Files */,
-			);
-			name = Signals;
-			path = Signals;
-			sourceTree = "<group>";
-		};
-		2792DD200F84E07B18AECAA6C38E92D1 /* Pods-SwiftySensors macOS */ = {
-			isa = PBXGroup;
-			children = (
-				1DB9B56FBBE46EFA05B22425DEB80B9C /* Info.plist */,
-				04CCFFD83453F3F0EA0D27DC33C791AE /* Pods-SwiftySensors macOS.modulemap */,
-				12EF8DFC4680B3E667E203F349B8AF68 /* Pods-SwiftySensors macOS-acknowledgements.markdown */,
-				A968A1D52CDE861CC810282E09463390 /* Pods-SwiftySensors macOS-acknowledgements.plist */,
-				956C443BA930AF16F7D2CFDB5E3C20B2 /* Pods-SwiftySensors macOS-dummy.m */,
-				6A73F7F1213D98CA22C1FC01A6EBC096 /* Pods-SwiftySensors macOS-resources.sh */,
-				222C54032860460B9544C29BDD2FDA03 /* Pods-SwiftySensors macOS-umbrella.h */,
-				498F89372B7A27F47A56584372C1F839 /* Pods-SwiftySensors macOS.debug.xcconfig */,
-				E6F9F17EACDCB024ACD1F02A2760F5CC /* Pods-SwiftySensors macOS.release.xcconfig */,
-			);
-			name = "Pods-SwiftySensors macOS";
-			path = "Target Support Files/Pods-SwiftySensors macOS";
-			sourceTree = "<group>";
-		};
-		2EDFAB15A7E74F864EB353FCB5A57006 /* OS X */ = {
-			isa = PBXGroup;
-			children = (
-				CDDAA23DDA8E082FC77E38FA01601C8F /* Cocoa.framework */,
-			);
-			name = "OS X";
-			sourceTree = "<group>";
-		};
-		3861202B1FB6858B33EE771ACA5C39E3 /* Pods-SwiftySensorsExample */ = {
-			isa = PBXGroup;
-			children = (
-				1838BE7DC9D7D6648A9130C17C9FDA2C /* Info.plist */,
-				D872ED1CFDED2BE560CC80345436FBE2 /* Pods-SwiftySensorsExample.modulemap */,
-				686C59A74570902E6B02456183DFB592 /* Pods-SwiftySensorsExample-acknowledgements.markdown */,
-				0B805694FB33B178DC24D360D53B4FCA /* Pods-SwiftySensorsExample-acknowledgements.plist */,
-				BA99DE6EA8F9114D57FF31A1DCC12C0A /* Pods-SwiftySensorsExample-dummy.m */,
-				8B8B425F88137D93D6A11371F16B954D /* Pods-SwiftySensorsExample-frameworks.sh */,
-				29F349C9A25CB35A6C01900A27D851B7 /* Pods-SwiftySensorsExample-resources.sh */,
-				2125F70BB0D80C84F99A4B5A7161673B /* Pods-SwiftySensorsExample-umbrella.h */,
-				3794CAFAF16A7379CE7EA6B55EE16F7A /* Pods-SwiftySensorsExample.debug.xcconfig */,
-				DBEC4CFB2A2B9ABB3BB198C2EBACE3DB /* Pods-SwiftySensorsExample.release.xcconfig */,
+				7905763F8F7D3506F62DF7E91A0B2D0B /* Info.plist */,
+				F46F507D299D7EA3905802392C31BF3E /* Pods-SwiftySensorsExample.modulemap */,
+				AE5B31342F4D0A3D095886D93B8E934C /* Pods-SwiftySensorsExample-acknowledgements.markdown */,
+				B58C3DE3AF077C5878744C27D64BCB26 /* Pods-SwiftySensorsExample-acknowledgements.plist */,
+				D52C8DF4CDA23F85D0F0C94741D9E984 /* Pods-SwiftySensorsExample-dummy.m */,
+				926B51BDD060EFD268ABF9E6D678ACB0 /* Pods-SwiftySensorsExample-frameworks.sh */,
+				BAE727C196B6519E78690F7C2B5FCBD9 /* Pods-SwiftySensorsExample-resources.sh */,
+				1B3521ABD347584140173E30DEBBE5D3 /* Pods-SwiftySensorsExample-umbrella.h */,
+				094932D89CCB010E4C4D40D0E40C2F81 /* Pods-SwiftySensorsExample.debug.xcconfig */,
+				3D66E01D00A6B5498CE7162457DC4F11 /* Pods-SwiftySensorsExample.release.xcconfig */,
 			);
 			name = "Pods-SwiftySensorsExample";
 			path = "Target Support Files/Pods-SwiftySensorsExample";
 			sourceTree = "<group>";
 		};
-		3AEF7D761E8EA8419BB4A7000AB770CB /* Frameworks */ = {
+		18B150953C65CABDCBFEEBB1BBDC1B9A /* Pods-SwiftySensors macOS */ = {
 			isa = PBXGroup;
 			children = (
-				8C918DD0468B798DBE7EEDD4C9D4170B /* iOS */,
-				2EDFAB15A7E74F864EB353FCB5A57006 /* OS X */,
+				A4634B98663BFA95D5B466BC584C2CBA /* Info.plist */,
+				FE7D1191C07081478067F235785D809D /* Pods-SwiftySensors macOS.modulemap */,
+				C376273A1DE9845654E551034CF5BE77 /* Pods-SwiftySensors macOS-acknowledgements.markdown */,
+				74447C06B1AAA36C434A9EE0CC68D99E /* Pods-SwiftySensors macOS-acknowledgements.plist */,
+				4F960F34022BB964F3BD73C8979C5CB7 /* Pods-SwiftySensors macOS-dummy.m */,
+				305E1EFF92E7178144DB6943DFAB59C9 /* Pods-SwiftySensors macOS-resources.sh */,
+				932816A19C161D4FEF54A302DBDD0EB8 /* Pods-SwiftySensors macOS-umbrella.h */,
+				A96748181FE63677601179085FD35B7C /* Pods-SwiftySensors macOS.debug.xcconfig */,
+				F606BFE2D0712E3D291A8308B1CBA0EB /* Pods-SwiftySensors macOS.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Pods-SwiftySensors macOS";
+			path = "Target Support Files/Pods-SwiftySensors macOS";
 			sourceTree = "<group>";
 		};
-		7A53CEE9CD9FD2C68385A1DA03711FB5 /* Targets Support Files */ = {
+		2C208A5CB70E20D9CCD384C1A583F5E1 /* Pods-SwiftySensors iOS */ = {
 			isa = PBXGroup;
 			children = (
-				EE26B89816A9C503109B85500160F0EF /* Pods-SwiftySensors iOS */,
-				2792DD200F84E07B18AECAA6C38E92D1 /* Pods-SwiftySensors macOS */,
-				3861202B1FB6858B33EE771ACA5C39E3 /* Pods-SwiftySensorsExample */,
+				BCB04C78C39A494039801095EC4552F4 /* Info.plist */,
+				7D701DDC13CCA7729E1A622609D29558 /* Pods-SwiftySensors iOS.modulemap */,
+				3DBD2D16B09F84D6ABDE56784607488B /* Pods-SwiftySensors iOS-acknowledgements.markdown */,
+				5D659F9FE4DB29F93D4D5927970A92F1 /* Pods-SwiftySensors iOS-acknowledgements.plist */,
+				425B782D2618CE06F84E611E089BB564 /* Pods-SwiftySensors iOS-dummy.m */,
+				83FAEF9231D326ED9D5CF64CE1D0FF83 /* Pods-SwiftySensors iOS-resources.sh */,
+				853EFF8A323D18DC60537120377AC84A /* Pods-SwiftySensors iOS-umbrella.h */,
+				274CF81F08B79E4C6315F24DE1DD4BB4 /* Pods-SwiftySensors iOS.debug.xcconfig */,
+				E2207B8D0D24B9483E1F4E37AB1E1361 /* Pods-SwiftySensors iOS.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-SwiftySensors iOS";
+			path = "Target Support Files/Pods-SwiftySensors iOS";
+			sourceTree = "<group>";
+		};
+		55D5BB0B413244251723A5493F45EE4B /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				B38A88E0776EAF5001831CAEFF93C9A0 /* Foundation.framework */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+		56FC8954006B1141111A205386DF06CA /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				CFB56E35108A1FCAA1F5604A02FFCDC5 /* Cocoa.framework */,
+			);
+			name = "OS X";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				3AEF7D761E8EA8419BB4A7000AB770CB /* Frameworks */,
+				E9474CE87C6AA9A851AEC24006206CAA /* Frameworks */,
 				02F4D147FA21E58CBC8F9E26EEF6143F /* Pods */,
-				C250CDAB4CFA98143F56AF548C6C1686 /* Products */,
-				7A53CEE9CD9FD2C68385A1DA03711FB5 /* Targets Support Files */,
+				F9926FCBC7179BC76ACB89EA70F69DBA /* Products */,
+				DE6CB0303115318FAC156D1BFAADA16F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8C918DD0468B798DBE7EEDD4C9D4170B /* iOS */ = {
+		C934EA71A8B1F2A916DB0F46672B23EF /* Pods-SwiftySensors tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				DB8E2D632CADFEBE217900FD1D4F3ABF /* Foundation.framework */,
+				F8D0DC7997013740A28CAC1476C6C9A1 /* Info.plist */,
+				9B0DF282BEFF0F8C90A87E230DC3269F /* Pods-SwiftySensors tvOS.modulemap */,
+				8CA120C4CD7FED8719A230FCC47469C1 /* Pods-SwiftySensors tvOS-acknowledgements.markdown */,
+				109660AEA2424594437DE389FA8B096C /* Pods-SwiftySensors tvOS-acknowledgements.plist */,
+				7830D0BC27380D1D9D19BD6A70F4896C /* Pods-SwiftySensors tvOS-dummy.m */,
+				1582971CD544B12CAEBE6DAE6D05AD43 /* Pods-SwiftySensors tvOS-resources.sh */,
+				A2D637604C33E2C0C4C8A39A4C5361FA /* Pods-SwiftySensors tvOS-umbrella.h */,
+				8EAE3F3C9BB65C4CE25A41B006C7A7DB /* Pods-SwiftySensors tvOS.debug.xcconfig */,
+				3B2EDF547CD90B458C00AFF2455C651B /* Pods-SwiftySensors tvOS.release.xcconfig */,
 			);
-			name = iOS;
+			name = "Pods-SwiftySensors tvOS";
+			path = "Target Support Files/Pods-SwiftySensors tvOS";
 			sourceTree = "<group>";
 		};
-		A533EE8F46D2D67F0B6787610BA84629 /* Support Files */ = {
+		D65084F824450D33604EC32CC180A387 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1359FBCA2E1B222619C561C2E87C73A0 /* Info.plist */,
-				85CB5BD6FE2A6B2BF745CBF773F0D4CC /* Info.plist */,
-				D94B7643C23AE58B0410C1203DD20A54 /* Signals-iOS.modulemap */,
-				F9DF6081CAD537D53740D95B78A677B5 /* Signals-iOS.xcconfig */,
-				D15AA8A3248CF95F9DEDACD8CD70674D /* Signals-iOS-dummy.m */,
-				D25B1B849A97E0835D9AA7A25099A71D /* Signals-iOS-prefix.pch */,
-				9B09B8B9CE9603F72B6585A9A2798C6E /* Signals-iOS-umbrella.h */,
-				F2826F8C87505A347A2C9A6F82281AED /* Signals-macOS.modulemap */,
-				61BC389F6D3AADFAA89647C9536D6E92 /* Signals-macOS.xcconfig */,
-				EC9D4BD3C3534B60F43A92AB196A2370 /* Signals-macOS-dummy.m */,
-				D91BF9A29BA14D2289BBC6D052981817 /* Signals-macOS-prefix.pch */,
-				542CAA59FFF12AE3BBD19918DF6C5193 /* Signals-macOS-umbrella.h */,
+				5E4C70616E7F34FCB408C58F6D4BC639 /* Info.plist */,
+				66E310D3A4AB4903832467DF2D23D515 /* Info.plist */,
+				30FAA9D557187A55B01E14CCAC0F6399 /* Info.plist */,
+				D65B4842196E335871CB3D653551C636 /* Signals-iOS.modulemap */,
+				85D81565BB2F4F21F258EBD3EC49C5C8 /* Signals-iOS.xcconfig */,
+				A2B95BFF932B41C9BF6ABE0EC10D4A47 /* Signals-iOS-dummy.m */,
+				A3357FA8C30128AD1737EA07FEB1EEA1 /* Signals-iOS-prefix.pch */,
+				F12D380DEE184F9BCC135F8D3766D5B3 /* Signals-iOS-umbrella.h */,
+				D8161DB0B6E4518CB3E98EC8DD1B3811 /* Signals-macOS.modulemap */,
+				9B5B5C1E0FB24CDD0F8E22DB5F9FD3BC /* Signals-macOS.xcconfig */,
+				A45D9AF73C90BC712EF55FDA38F418C4 /* Signals-macOS-dummy.m */,
+				9B288B0E2A8964C45EF0D993BF2C915B /* Signals-macOS-prefix.pch */,
+				4873D8BE0F3B08AEB61D0E6C80D91502 /* Signals-macOS-umbrella.h */,
+				545CB5476AC9763F999EAFF368FB0119 /* Signals-tvOS.modulemap */,
+				6FAD8F273493125B3755FFEA32DFBB44 /* Signals-tvOS.xcconfig */,
+				0427C6B1EA7111DB5C6D349D43A550D4 /* Signals-tvOS-dummy.m */,
+				CDB0C6F4DE0E29B044FF4B623C6945B7 /* Signals-tvOS-prefix.pch */,
+				AF71CBFD63692747BF0BD7D675B7F681 /* Signals-tvOS-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Signals-iOS";
 			sourceTree = "<group>";
 		};
-		C250CDAB4CFA98143F56AF548C6C1686 /* Products */ = {
+		DE6CB0303115318FAC156D1BFAADA16F /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6E55FA7E8676FF30182A012CF1E5399A /* Pods_SwiftySensors_iOS.framework */,
-				68026CA0BAFA99D75CEEA46C54333E11 /* Pods_SwiftySensors_macOS.framework */,
-				CFA4AAC78D7F5664F3C5167FC6E7A991 /* Pods_SwiftySensorsExample.framework */,
-				40D6A2541A9999B49ABA7628DB1D6785 /* Signals.framework */,
-				9579014BD43E78621B0A64702C8ADE81 /* Signals.framework */,
+				2C208A5CB70E20D9CCD384C1A583F5E1 /* Pods-SwiftySensors iOS */,
+				18B150953C65CABDCBFEEBB1BBDC1B9A /* Pods-SwiftySensors macOS */,
+				C934EA71A8B1F2A916DB0F46672B23EF /* Pods-SwiftySensors tvOS */,
+				0A8BE2FFB7F6DACC5D6261AD1F57CA87 /* Pods-SwiftySensorsExample */,
 			);
-			name = Products;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		EE26B89816A9C503109B85500160F0EF /* Pods-SwiftySensors iOS */ = {
+		E9474CE87C6AA9A851AEC24006206CAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9ACA3DF187CFA1B4577AB92269588D5D /* Info.plist */,
-				6E73049AD816BE7D60C56D112CECAB34 /* Pods-SwiftySensors iOS.modulemap */,
-				888D70FC9FF73A3134E07CFA9AE193A2 /* Pods-SwiftySensors iOS-acknowledgements.markdown */,
-				CFABA277E3780B28D2247B79504669FD /* Pods-SwiftySensors iOS-acknowledgements.plist */,
-				C4467A8EBA4D602E2FC324728280D53D /* Pods-SwiftySensors iOS-dummy.m */,
-				A2F10ED47CEAAD5121EBAE0B549B919B /* Pods-SwiftySensors iOS-resources.sh */,
-				86005356CA90DE437231DB216D1303C5 /* Pods-SwiftySensors iOS-umbrella.h */,
-				E373B1F41D8F4B930D1F9EE883FA4AF5 /* Pods-SwiftySensors iOS.debug.xcconfig */,
-				46C2A34653C1135445E4256B36D3A5A2 /* Pods-SwiftySensors iOS.release.xcconfig */,
+				F436BBC45CEF494D3C1224DC7D294486 /* iOS */,
+				56FC8954006B1141111A205386DF06CA /* OS X */,
+				55D5BB0B413244251723A5493F45EE4B /* tvOS */,
 			);
-			name = "Pods-SwiftySensors iOS";
-			path = "Target Support Files/Pods-SwiftySensors iOS";
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F436BBC45CEF494D3C1224DC7D294486 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7461AAFB7A771BCEC6E4E09204991FB5 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F924AC11883577D80A6D6E501FC1121D /* Signals */ = {
+			isa = PBXGroup;
+			children = (
+				8F5416B65BC70B930E89DC5BE8916F42 /* AssociatedObject.swift */,
+				302A0CB6771821BC756722B04732C4BC /* Signal.swift */,
+				C2DBAC2BB71C9B2B4B280C0DD4584528 /* UIControl+Signals.swift */,
+				D65084F824450D33604EC32CC180A387 /* Support Files */,
+			);
+			name = Signals;
+			path = Signals;
+			sourceTree = "<group>";
+		};
+		F9926FCBC7179BC76ACB89EA70F69DBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40BCA146343E5A45A531A6617C735374 /* Pods_SwiftySensors_iOS.framework */,
+				E898BDA62F0C3A544DF1545F3502C7EA /* Pods_SwiftySensors_macOS.framework */,
+				AD447555B8398C06BC116A0659270238 /* Pods_SwiftySensors_tvOS.framework */,
+				2F198510D29027652F11042287AEE012 /* Pods_SwiftySensorsExample.framework */,
+				E5A89DB477D0343423CBC6DFA3DCDD5D /* Signals.framework */,
+				B827A68F8DD03165F9CD4F855D05A2CC /* Signals.framework */,
+				1BA12FBE08360C135314586960A9BE88 /* Signals.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0E68F74017029C36CAD47709B9F7AE26 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11E49484823CEB246868E5983FC3B1D4 /* Pods-SwiftySensors tvOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29E4B20A6BDFFC370CF37721BB905801 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,6 +417,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				04137069B7E72B8815C3348A8E87CD79 /* Signals-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72C46BE33AC00AEEE10BA30125354C55 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0713B2A03991054ED1519D3515C2AA05 /* Signals-tvOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +461,24 @@
 			);
 			name = "Signals-iOS";
 			productName = "Signals-iOS";
-			productReference = 40D6A2541A9999B49ABA7628DB1D6785 /* Signals.framework */;
+			productReference = E5A89DB477D0343423CBC6DFA3DCDD5D /* Signals.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1628CC0CE707EC41CAD7741348755865 /* Signals-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04EEDFCEDCAF1F37079F0668B2D5C426 /* Build configuration list for PBXNativeTarget "Signals-tvOS" */;
+			buildPhases = (
+				F462B5293D87B9C3D8356E0DE6A99DAD /* Sources */,
+				B6F109D3D7D695FB7AC91DAD1FBAFCCF /* Frameworks */,
+				72C46BE33AC00AEEE10BA30125354C55 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Signals-tvOS";
+			productName = "Signals-tvOS";
+			productReference = 1BA12FBE08360C135314586960A9BE88 /* Signals.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		446B5907F874FD675ED48E42E2EBB56A /* Pods-SwiftySensors iOS */ = {
@@ -378,7 +496,7 @@
 			);
 			name = "Pods-SwiftySensors iOS";
 			productName = "Pods-SwiftySensors iOS";
-			productReference = 6E55FA7E8676FF30182A012CF1E5399A /* Pods_SwiftySensors_iOS.framework */;
+			productReference = 40BCA146343E5A45A531A6617C735374 /* Pods_SwiftySensors_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5750727DACB8CAEBD9E5A506356D21CB /* Pods-SwiftySensors macOS */ = {
@@ -396,7 +514,25 @@
 			);
 			name = "Pods-SwiftySensors macOS";
 			productName = "Pods-SwiftySensors macOS";
-			productReference = 68026CA0BAFA99D75CEEA46C54333E11 /* Pods_SwiftySensors_macOS.framework */;
+			productReference = E898BDA62F0C3A544DF1545F3502C7EA /* Pods_SwiftySensors_macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7EF5B10F2E2F0AC1A61684D537D202BF /* Pods-SwiftySensors tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4312434F3A7596DFF9904A52D269202 /* Build configuration list for PBXNativeTarget "Pods-SwiftySensors tvOS" */;
+			buildPhases = (
+				DC3D63B2A9A043B70ACD23EF5CCB69FB /* Sources */,
+				2BFF548B61127956756FE350A0290BDC /* Frameworks */,
+				0E68F74017029C36CAD47709B9F7AE26 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C7CE66DD05AA10A0597ABF473E4610D /* PBXTargetDependency */,
+			);
+			name = "Pods-SwiftySensors tvOS";
+			productName = "Pods-SwiftySensors tvOS";
+			productReference = AD447555B8398C06BC116A0659270238 /* Pods_SwiftySensors_tvOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B7F07DCB2E7ABC2880CBE0CEE8A619EC /* Signals-macOS */ = {
@@ -413,7 +549,7 @@
 			);
 			name = "Signals-macOS";
 			productName = "Signals-macOS";
-			productReference = 9579014BD43E78621B0A64702C8ADE81 /* Signals.framework */;
+			productReference = B827A68F8DD03165F9CD4F855D05A2CC /* Signals.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BB0A583215CB4BCC03DDF8B445CF306D /* Pods-SwiftySensorsExample */ = {
@@ -431,7 +567,7 @@
 			);
 			name = "Pods-SwiftySensorsExample";
 			productName = "Pods-SwiftySensorsExample";
-			productReference = CFA4AAC78D7F5664F3C5167FC6E7A991 /* Pods_SwiftySensorsExample.framework */;
+			productReference = 2F198510D29027652F11042287AEE012 /* Pods_SwiftySensorsExample.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -451,15 +587,17 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = C250CDAB4CFA98143F56AF548C6C1686 /* Products */;
+			productRefGroup = F9926FCBC7179BC76ACB89EA70F69DBA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				446B5907F874FD675ED48E42E2EBB56A /* Pods-SwiftySensors iOS */,
 				5750727DACB8CAEBD9E5A506356D21CB /* Pods-SwiftySensors macOS */,
+				7EF5B10F2E2F0AC1A61684D537D202BF /* Pods-SwiftySensors tvOS */,
 				BB0A583215CB4BCC03DDF8B445CF306D /* Pods-SwiftySensorsExample */,
 				0043D46785DCF8E63B70C4A1A4B91404 /* Signals-iOS */,
 				B7F07DCB2E7ABC2880CBE0CEE8A619EC /* Signals-macOS */,
+				1628CC0CE707EC41CAD7741348755865 /* Signals-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -509,6 +647,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DC3D63B2A9A043B70ACD23EF5CCB69FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B34201296D7CDC1D5CD87D35BA38D79F /* Pods-SwiftySensors tvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F462B5293D87B9C3D8356E0DE6A99DAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				681792405B21AA0252369C26B627E413 /* AssociatedObject.swift in Sources */,
+				D8A6DF35D53BD223E8BC321434FFB301 /* Signal.swift in Sources */,
+				FD2F239F38D647A6AE49FB34484AD478 /* Signals-tvOS-dummy.m in Sources */,
+				3465A36E2E4F189B9EF28999A2B33E4D /* UIControl+Signals.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -517,6 +674,12 @@
 			name = "Signals-macOS";
 			target = B7F07DCB2E7ABC2880CBE0CEE8A619EC /* Signals-macOS */;
 			targetProxy = 20E2D1FC76677C0A58FA968D168CFDF7 /* PBXContainerItemProxy */;
+		};
+		6C7CE66DD05AA10A0597ABF473E4610D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Signals-tvOS";
+			target = 1628CC0CE707EC41CAD7741348755865 /* Signals-tvOS */;
+			targetProxy = B03B3341A721E0B32EBA66BB9A34DCC7 /* PBXContainerItemProxy */;
 		};
 		9B0C0F25413037396E3EAD80CF3C6D46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -535,7 +698,7 @@
 /* Begin XCBuildConfiguration section */
 		0EEC0A4B8DAE2C39804C951DECC9C272 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3794CAFAF16A7379CE7EA6B55EE16F7A /* Pods-SwiftySensorsExample.debug.xcconfig */;
+			baseConfigurationReference = 094932D89CCB010E4C4D40D0E40C2F81 /* Pods-SwiftySensorsExample.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -567,141 +730,9 @@
 			};
 			name = Debug;
 		};
-		141841596D20E7961E635345B54521E6 /* Debug */ = {
+		1C613C4760013B72782754E4CFA2C036 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61BC389F6D3AADFAA89647C9536D6E92 /* Signals-macOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/Signals-macOS/Signals-macOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Signals-macOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/Signals-macOS/Signals-macOS.modulemap";
-				PRODUCT_NAME = Signals;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		18EC8FA25D7AE3023FB7087835E402A7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61BC389F6D3AADFAA89647C9536D6E92 /* Signals-macOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/Signals-macOS/Signals-macOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Signals-macOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/Signals-macOS/Signals-macOS.modulemap";
-				PRODUCT_NAME = Signals;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5EFF50AB20BAB17603A7AF204AF78D46 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E373B1F41D8F4B930D1F9EE883FA4AF5 /* Pods-SwiftySensors iOS.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftySensors iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwiftySensors iOS/Pods-SwiftySensors iOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SwiftySensors_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		75157DBC8E78733EF24FA9DD4C1A120E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46C2A34653C1135445E4256B36D3A5A2 /* Pods-SwiftySensors iOS.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftySensors iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwiftySensors iOS/Pods-SwiftySensors iOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SwiftySensors_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7C33AA59841AB3617CFA3FBFB1B561F1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6F9F17EACDCB024ACD1F02A2760F5CC /* Pods-SwiftySensors macOS.release.xcconfig */;
+			baseConfigurationReference = A96748181FE63677601179085FD35B7C /* Pods-SwiftySensors macOS.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -718,7 +749,74 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftySensors macOS/Pods-SwiftySensors macOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftySensors_macOS;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3AEBA126CFA43B98D2D202EE5943E7BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B5B5C1E0FB24CDD0F8E22DB5F9FD3BC /* Signals-macOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Signals-macOS/Signals-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Signals-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/Signals-macOS/Signals-macOS.modulemap";
+				PRODUCT_NAME = Signals;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		45AC6BA98E070ECC227EBAA3077CA7D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F606BFE2D0712E3D291A8308B1CBA0EB /* Pods-SwiftySensors macOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftySensors macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftySensors macOS/Pods-SwiftySensors macOS.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -733,9 +831,9 @@
 			};
 			name = Release;
 		};
-		A8D43DD7BD1ED0DF80D78E6A59058F06 /* Release */ = {
+		55BF24F3F892DDBC1D27A3E8E93A00B2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBEC4CFB2A2B9ABB3BB198C2EBACE3DB /* Pods-SwiftySensorsExample.release.xcconfig */;
+			baseConfigurationReference = 6FAD8F273493125B3755FFEA32DFBB44 /* Signals-tvOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -746,28 +844,26 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftySensorsExample/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Signals-tvOS/Signals-tvOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Signals-tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwiftySensorsExample/Pods-SwiftySensorsExample.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SwiftySensorsExample;
-				SDKROOT = iphoneos;
+				MODULEMAP_FILE = "Target Support Files/Signals-tvOS/Signals-tvOS.modulemap";
+				PRODUCT_NAME = Signals;
+				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		A9E54460F3EEEEFCEF1D3D3A426575B2 /* Release */ = {
+		56DA78AE7EECB1595A8723E7D57F8503 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -814,16 +910,85 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 11.2;
 			};
 			name = Release;
 		};
-		B08B08872B4A4FAE51B751563EB2A741 /* Debug */ = {
+		5969337AE3CBB139833F6D5E611CC867 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B2EDF547CD90B458C00AFF2455C651B /* Pods-SwiftySensors tvOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftySensors tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftySensors tvOS/Pods-SwiftySensors tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftySensors_tvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5EFF50AB20BAB17603A7AF204AF78D46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 274CF81F08B79E4C6315F24DE1DD4BB4 /* Pods-SwiftySensors iOS.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftySensors iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftySensors iOS/Pods-SwiftySensors iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftySensors_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		62E83BFBC1C4553B0612992700C63343 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -873,7 +1038,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -881,12 +1046,47 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 11.2;
 			};
 			name = Debug;
 		};
-		B1F6D3650C53F0E9397CEB08BAD06C80 /* Debug */ = {
+		75157DBC8E78733EF24FA9DD4C1A120E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 498F89372B7A27F47A56584372C1F839 /* Pods-SwiftySensors macOS.debug.xcconfig */;
+			baseConfigurationReference = E2207B8D0D24B9483E1F4E37AB1E1361 /* Pods-SwiftySensors iOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftySensors iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftySensors iOS/Pods-SwiftySensors iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftySensors_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7BE79308A797EFA51DF5E513A820C841 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B5B5C1E0FB24CDD0F8E22DB5F9FD3BC /* Signals-macOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -899,29 +1099,91 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftySensors macOS/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Signals-macOS/Signals-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Signals-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwiftySensors macOS/Pods-SwiftySensors macOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SwiftySensors_macOS;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/Signals-macOS/Signals-macOS.modulemap";
+				PRODUCT_NAME = Signals;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
+		8D744F9F0A4257A1DBB361797175A67D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FAD8F273493125B3755FFEA32DFBB44 /* Signals-tvOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Signals-tvOS/Signals-tvOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Signals-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Signals-tvOS/Signals-tvOS.modulemap";
+				PRODUCT_NAME = Signals;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A8D43DD7BD1ED0DF80D78E6A59058F06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D66E01D00A6B5498CE7162457DC4F11 /* Pods-SwiftySensorsExample.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftySensorsExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftySensorsExample/Pods-SwiftySensorsExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftySensorsExample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		CE4C83604E65F6F33F1F93F90AC64101 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9DF6081CAD537D53740D95B78A677B5 /* Signals-iOS.xcconfig */;
+			baseConfigurationReference = 85D81565BB2F4F21F258EBD3EC49C5C8 /* Signals-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -952,7 +1214,7 @@
 		};
 		F1F7E033E981E31288FC42639BF30912 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9DF6081CAD537D53740D95B78A677B5 /* Signals-iOS.xcconfig */;
+			baseConfigurationReference = 85D81565BB2F4F21F258EBD3EC49C5C8 /* Signals-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -982,9 +1244,52 @@
 			};
 			name = Release;
 		};
+		F226651D279FC60667CA43B88FBD2C48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EAE3F3C9BB65C4CE25A41B006C7A7DB /* Pods-SwiftySensors tvOS.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftySensors tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftySensors tvOS/Pods-SwiftySensors tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftySensors_tvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		04EEDFCEDCAF1F37079F0668B2D5C426 /* Build configuration list for PBXNativeTarget "Signals-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D744F9F0A4257A1DBB361797175A67D /* Debug */,
+				55BF24F3F892DDBC1D27A3E8E93A00B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		057D0C89F03038A884F43584B45F9970 /* Build configuration list for PBXNativeTarget "Signals-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -997,8 +1302,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B08B08872B4A4FAE51B751563EB2A741 /* Debug */,
-				A9E54460F3EEEEFCEF1D3D3A426575B2 /* Release */,
+				62E83BFBC1C4553B0612992700C63343 /* Debug */,
+				56DA78AE7EECB1595A8723E7D57F8503 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1006,8 +1311,8 @@
 		3D17BE2A3AC013A113D530F79D78D9E5 /* Build configuration list for PBXNativeTarget "Signals-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				141841596D20E7961E635345B54521E6 /* Debug */,
-				18EC8FA25D7AE3023FB7087835E402A7 /* Release */,
+				7BE79308A797EFA51DF5E513A820C841 /* Debug */,
+				3AEBA126CFA43B98D2D202EE5943E7BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1024,8 +1329,17 @@
 		CD3BAB3FE12A7890522635C9B9D66A3F /* Build configuration list for PBXNativeTarget "Pods-SwiftySensors macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B1F6D3650C53F0E9397CEB08BAD06C80 /* Debug */,
-				7C33AA59841AB3617CFA3FBFB1B561F1 /* Release */,
+				1C613C4760013B72782754E4CFA2C036 /* Debug */,
+				45AC6BA98E070ECC227EBAA3077CA7D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4312434F3A7596DFF9904A52D269202 /* Build configuration list for PBXNativeTarget "Pods-SwiftySensors tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F226651D279FC60667CA43B88FBD2C48 /* Debug */,
+				5969337AE3CBB139833F6D5E611CC867 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

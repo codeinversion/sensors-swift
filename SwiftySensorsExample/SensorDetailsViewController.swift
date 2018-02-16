@@ -23,10 +23,10 @@ class SensorDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sensor.onServiceDiscovered.subscribe(on: self) { [weak self] sensor, service in
+        sensor.onServiceDiscovered.subscribe(with: self) { [weak self] sensor, service in
             self?.rebuildData()
         }
-        sensor.onStateChanged.subscribe(on: self) { [weak self] sensor in
+        sensor.onStateChanged.subscribe(with: self) { [weak self] sensor in
             self?.updateConnectButton()
         }
     }

@@ -167,10 +167,10 @@ public class SensorManager: NSObject {
     internal class ServiceFactory {
         fileprivate(set) var serviceTypes = Dictionary<String, Service.Type>()
         
-        var serviceUUIDs: [CBUUID] {
-            return serviceTypes.keys.map { uuid in
+        var serviceUUIDs: [CBUUID]? {
+            return serviceTypes.count > 0 ? serviceTypes.keys.map { uuid in
                 return CBUUID(string: uuid)
-            }
+            } : nil
         }
         
         var servicesToDiscover: [CBUUID] = []
@@ -271,7 +271,7 @@ extension SensorManager: CBCentralManagerDelegate {
     
     /// :nodoc:
     public func centralManager(_ manager: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
-        SensorManager.logSensorMessage?("CBCentralManager: didFailToConnectPeripheral: \(peripheral)")
+        SensorManager.logSensorMessage?("CBCentralManager: didFailToConnectPeripheral: \(peripheral) :: \(error?.localizedDescription ?? "No Error Given")")
         
         if let sensor = sensorForPeripheral(peripheral, create: false) {
             onSensorConnectionFailed => sensor

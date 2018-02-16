@@ -22,7 +22,7 @@ class ServiceDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        service.sensor.onCharacteristicDiscovered.subscribe(on: self) { [weak self] sensor, characteristic in
+        service.sensor.onCharacteristicDiscovered.subscribe(with: self) { [weak self] sensor, characteristic in
             self?.rebuildData()
         }
     }

@@ -17,7 +17,7 @@ class SensorListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        SensorManager.instance.onSensorDiscovered.subscribe(on: self) { [weak self] sensor in
+        SensorManager.instance.onSensorDiscovered.subscribe(with: self) { [weak self] sensor in
             guard let s = self else { return }
             if !s.sensors.contains(sensor) {
                 s.sensors.append(sensor)

@@ -21,7 +21,7 @@ open class FitnessMachineService: Service, ServiceProtocol {
     public static var characteristicTypes: Dictionary<String, Characteristic.Type> = [
         Feature.uuid:                       Feature.self,
         ControlPoint.uuid:                  ControlPoint.self,
-        Status.uuid:                        Status.self,
+        MachineStatus.uuid:                 MachineStatus.self,
         TreadmillData.uuid:                 TreadmillData.self,
         CrossTrainerData.uuid:              CrossTrainerData.self,
         StepClimberData.uuid:               StepClimberData.self,
@@ -38,7 +38,7 @@ open class FitnessMachineService: Service, ServiceProtocol {
     
     open var feature: Feature? { return characteristic() }
     open var controlPoint: ControlPoint? { return characteristic() }
-    open var status: Status? { return characteristic() }
+    open var machineStatus: MachineStatus? { return characteristic() }
     open var treadmillData: TreadmillData? { return characteristic() }
     open var crossTrainerData: CrossTrainerData? { return characteristic() }
     open var stepClimberData: StepClimberData? { return characteristic() }
@@ -104,27 +104,92 @@ open class FitnessMachineService: Service, ServiceProtocol {
             super.valueUpdated()
         }
         
-        open func setTargetPower(watts: Int16) {
-            cbCharacteristic.write(Data(bytes: FitnessMachineSerializer.setTargetPower(watts: watts)), writeType: .withResponse)
+        @discardableResult open func requestControl() -> [UInt8] {
+            let bytes = FitnessMachineSerializer.requestControl()
+            cbCharacteristic.write(Data(bytes: bytes), writeType: .withResponse)
+            return bytes
         }
         
-        open func setTargetResistanceLevel(level: Int16) {
-            cbCharacteristic.write(Data(bytes: FitnessMachineSerializer.setTargetResistanceLevel(level: level)), writeType: .withResponse)
+        @discardableResult open func startOrResume() -> [UInt8] {
+            let bytes = FitnessMachineSerializer.startOrResume()
+            cbCharacteristic.write(Data(bytes: bytes), writeType: .withResponse)
+            return bytes
         }
         
-        open func setIndoorBikeSimulationParameters(windSpeed: Int16, grade: Int16, crr: UInt8, cw: UInt8) {
-            cbCharacteristic.write(Data(bytes: FitnessMachineSerializer.setIndoorBikeSimulationParameters(windSpeed: windSpeed, grade: grade, crr: crr, cw: cw)), writeType: .withResponse)
+        fileprivate var pendingTargetPower: Int16?
+        @discardableResult open func setTargetPower(watts: Int16) -> [UInt8] {
+            let bytes = FitnessMachineSerializer.setTargetPower(watts: watts)
+            
+            // Prevent flooding the characteristic with unnecessary writes
+            if let pendingTargetPower = pendingTargetPower, pendingTargetPower == watts {
+                // skipping write, still waiting on MachineStatus Message before clearing
+                return bytes
+            }
+            if let targetPower = (service as? FitnessMachineService)?.machineStatus?.message?.targetPower, targetPower == watts {
+                // skipping write, targetpower is already set
+                return bytes
+            }
+            pendingTargetPower = watts
+            
+            cbCharacteristic.write(Data(bytes: bytes), writeType: .withResponse)
+            return bytes
         }
         
-        open func startSpindownProcess() {
-            cbCharacteristic.write(Data(bytes: FitnessMachineSerializer.startSpinDownControl()), writeType: .withResponse)
+        fileprivate var pendingTargetResistanceLevel: Double?
+        @discardableResult open func setTargetResistanceLevel(level: Double) -> [UInt8] {
+            let bytes = FitnessMachineSerializer.setTargetResistanceLevel(level: level)
+            
+            // Prevent flooding the characteristic with unnecessary writes
+            if let pendingTargetResistanceLevel = pendingTargetResistanceLevel, abs(level - pendingTargetResistanceLevel) < .ulpOfOne {
+                // skipping write, still waiting on MachineStatus Message before clearing
+                return bytes
+            }
+            if let targetResistanceLevel = (service as? FitnessMachineService)?.machineStatus?.message?.targetResistanceLevel, abs(level - targetResistanceLevel) < .ulpOfOne {
+                // skipping write, targetpower is already set
+                return bytes
+            }
+            pendingTargetResistanceLevel = level
+            
+            cbCharacteristic.write(Data(bytes: bytes), writeType: .withResponse)
+            return bytes
+        }
+        fileprivate var pendingTargetSimParameters: FitnessMachineSerializer.IndoorBikeSimulationParameters?
+        @discardableResult open func setIndoorBikeSimulationParameters(windSpeed: Double, grade: Double, crr: Double, crw: Double) -> [UInt8] {
+            let params = FitnessMachineSerializer.IndoorBikeSimulationParameters(windSpeed: windSpeed, grade: grade, crr: crr, crw: crw)
+            let bytes = FitnessMachineSerializer.setIndoorBikeSimulationParameters(params)
+            
+            // Prevent flooding the characteristic with unnecessary writes
+            if let pendingTargetSimParameters = pendingTargetSimParameters, pendingTargetSimParameters == params {
+                // skipping write, still waiting on MachineStatus Message before clearing
+                return bytes
+            }
+            if let targetSimParameters = (service as? FitnessMachineService)?.machineStatus?.message?.targetSimParameters, targetSimParameters == params {
+                // skipping write, targetpower is already set
+                return bytes
+            }
+            pendingTargetSimParameters = params
+            
+            cbCharacteristic.write(Data(bytes: bytes), writeType: .withResponse)
+            return bytes
+        }
+        
+        @discardableResult open func startSpindownProcess() -> [UInt8] {
+            let bytes = FitnessMachineSerializer.startSpinDownControl()
+            cbCharacteristic.write(Data(bytes: bytes), writeType: .withResponse)
+            return bytes
+        }
+        
+        @discardableResult open func ignoreSpindownRequest() -> [UInt8] {
+            let bytes = FitnessMachineSerializer.ignoreSpinDownControlRequest()
+            cbCharacteristic.write(Data(bytes: bytes), writeType: .withResponse)
+            return bytes
         }
     }
     
     //
     // https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.characteristic.fitness_machine_status.xml
     //
-    open class Status: Characteristic {
+    open class MachineStatus: Characteristic {
         
         public static let uuid: String = "2ADA"
         
@@ -134,8 +199,26 @@ open class FitnessMachineService: Service, ServiceProtocol {
             cbCharacteristic.notify(true)
         }
         
+        public var message: FitnessMachineSerializer.MachineStatusMessage? {
+            didSet {
+                // Target Power Set?
+                if let message = message, message.opCode == .targetPowerChanged {
+                    (service as? FitnessMachineService)?.controlPoint?.pendingTargetPower = nil
+                }
+                // Target Resistance Level Set?
+                if let message = message, message.opCode == .targetResistancLevelChanged {
+                    (service as? FitnessMachineService)?.controlPoint?.pendingTargetResistanceLevel = nil
+                }
+                // Indoor Simulation Params Changed?
+                if let message = message, message.opCode == .indoorBikeSimulationParametersChanged {
+                    (service as? FitnessMachineService)?.controlPoint?.pendingTargetSimParameters = nil
+                }
+            }
+        }
+        
         override open func valueUpdated() {
             if let value = cbCharacteristic.value {
+                message = FitnessMachineSerializer.readMachineStatus(value)
             }
             super.valueUpdated()
         }
@@ -184,9 +267,9 @@ open class FitnessMachineService: Service, ServiceProtocol {
         }
         
         override open func valueUpdated() {
-            if let value = cbCharacteristic.value {
-                // TODO: deserialize value
-            }
+//            if let value = cbCharacteristic.value {
+//                // TODO: deserialize value
+//            }
             super.valueUpdated()
         }
         
@@ -206,9 +289,9 @@ open class FitnessMachineService: Service, ServiceProtocol {
         }
         
         override open func valueUpdated() {
-            if let value = cbCharacteristic.value {
-                // TODO: deserialize value
-            }
+//            if let value = cbCharacteristic.value {
+//                // TODO: deserialize value
+//            }
             super.valueUpdated()
         }
         
@@ -228,9 +311,9 @@ open class FitnessMachineService: Service, ServiceProtocol {
         }
         
         override open func valueUpdated() {
-            if let value = cbCharacteristic.value {
-                // TODO: deserialize value
-            }
+//            if let value = cbCharacteristic.value {
+//                // TODO: deserialize value
+//            }
             super.valueUpdated()
         }
         
@@ -250,9 +333,9 @@ open class FitnessMachineService: Service, ServiceProtocol {
         }
         
         override open func valueUpdated() {
-            if let value = cbCharacteristic.value {
-                // TODO: deserialize value
-            }
+//            if let value = cbCharacteristic.value {
+//                // TODO: deserialize value
+//            }
             super.valueUpdated()
         }
         
@@ -272,9 +355,9 @@ open class FitnessMachineService: Service, ServiceProtocol {
         }
         
         override open func valueUpdated() {
-            if let value = cbCharacteristic.value {
-                // TODO: deserialize value
-            }
+//            if let value = cbCharacteristic.value {
+//                // TODO: deserialize value
+//            }
             super.valueUpdated()
         }
         
@@ -318,9 +401,9 @@ open class FitnessMachineService: Service, ServiceProtocol {
         }
         
         override open func valueUpdated() {
-            if let value = cbCharacteristic.value {
-                // TODO: deserialize value
-            }
+//            if let value = cbCharacteristic.value {
+//                // TODO: deserialize value
+//            }
             super.valueUpdated()
         }
         
@@ -340,9 +423,9 @@ open class FitnessMachineService: Service, ServiceProtocol {
         }
         
         override open func valueUpdated() {
-            if let value = cbCharacteristic.value {
-                // TODO: deserialize value
-            }
+//            if let value = cbCharacteristic.value {
+//                // TODO: deserialize value
+//            }
             super.valueUpdated()
         }
         
@@ -370,13 +453,13 @@ open class FitnessMachineService: Service, ServiceProtocol {
         }
         
         // -1.0 to 1.0
-        public func convert(percent: Double) -> Int16 {
+        public func convert(percent: Double) -> Double {
             if let data = data {
                 if data.minimumResistanceLevel >= 0 {
-                    return Int16(data.minimumResistanceLevel + (percent * (data.maximumResistanceLevel - data.minimumResistanceLevel)))
+                    return data.minimumResistanceLevel + (percent * (data.maximumResistanceLevel - data.minimumResistanceLevel))
                 } else {
                     let absMax = max(fabs(data.minimumResistanceLevel), data.maximumResistanceLevel)
-                    return Int16(max(data.minimumResistanceLevel, min(percent * absMax, data.maximumResistanceLevel)))
+                    return max(data.minimumResistanceLevel, min(percent * absMax, data.maximumResistanceLevel))
                 }
             }
             return 0
@@ -421,9 +504,9 @@ open class FitnessMachineService: Service, ServiceProtocol {
         }
         
         override open func valueUpdated() {
-            if let value = cbCharacteristic.value {
-                // TODO: deserialize value
-            }
+//            if let value = cbCharacteristic.value {
+//                // TODO: deserialize value
+//            }
             super.valueUpdated()
         }
         

@@ -43,7 +43,7 @@ open class CyclingSerializer {
     }
     
     open static func readSensorLocation(_ data: Data) -> SensorLocation? {
-        let bytes = (data as NSData).bytes.bindMemory(to: UInt8.self, capacity: data.count)
+        let bytes = data.map { $0 }
         return SensorLocation(rawValue: bytes[0])
     }
     

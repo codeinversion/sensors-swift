@@ -45,32 +45,32 @@ open class CyclingSpeedCadenceSerializer {
     
     
     open static func readFeatures(_ data: Data) -> Features {
-        let bytes = (data as NSData).bytes.bindMemory(to: UInt8.self, capacity: data.count)
-        let rawFeatures: UInt16 = ((UInt16)(bytes[0])) | ((UInt16)(bytes[1])) << 8
+        let bytes = data.map { $0 }
+        let rawFeatures: UInt16 = UInt16(bytes[0]) | UInt16(bytes[1]) << 8
         return Features(rawValue: rawFeatures)
     }
     
     open static func readMeasurement(_ data: Data) -> MeasurementData {
         var measurement = MeasurementData()
         
-        let bytes = (data as NSData).bytes.bindMemory(to: UInt8.self, capacity: data.count)
+        let bytes = data.map { $0 }
         var index: Int = 0
         
         let rawFlags: UInt8 = bytes[index++=]
         let flags = MeasurementFlags(rawValue: rawFlags)
         
         if flags.contains(.WheelRevolutionDataPresent) {
-            var cumulativeWheelRevolutions = ((UInt32)(bytes[index++=]))
-            cumulativeWheelRevolutions |= ((UInt32)(bytes[index++=])) << 8
-            cumulativeWheelRevolutions |= ((UInt32)(bytes[index++=])) << 16
-            cumulativeWheelRevolutions |= ((UInt32)(bytes[index++=])) << 24
+            var cumulativeWheelRevolutions = UInt32(bytes[index++=])
+            cumulativeWheelRevolutions |= UInt32(bytes[index++=]) << 8
+            cumulativeWheelRevolutions |= UInt32(bytes[index++=]) << 16
+            cumulativeWheelRevolutions |= UInt32(bytes[index++=]) << 24
             measurement.cumulativeWheelRevolutions = cumulativeWheelRevolutions
-            measurement.lastWheelEventTime = ((UInt16)(bytes[index++=])) | ((UInt16)(bytes[index++=])) << 8
+            measurement.lastWheelEventTime = UInt16(bytes[index++=]) | UInt16(bytes[index++=]) << 8
         }
         
         if flags.contains(.CrankRevolutionDataPresent) {
-            measurement.cumulativeCrankRevolutions = ((UInt16)(bytes[index++=])) | ((UInt16)(bytes[index++=])) << 8
-            measurement.lastCrankEventTime = ((UInt16)(bytes[index++=])) | ((UInt16)(bytes[index++=])) << 8
+            measurement.cumulativeCrankRevolutions = UInt16(bytes[index++=]) | UInt16(bytes[index++=]) << 8
+            measurement.lastCrankEventTime = UInt16(bytes[index++=]) | UInt16(bytes[index++=]) << 8
         }
         
         measurement.timestamp = Date.timeIntervalSinceReferenceDate
