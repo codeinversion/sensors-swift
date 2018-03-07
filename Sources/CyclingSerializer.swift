@@ -63,7 +63,7 @@ open class CyclingSerializer {
             let minsPerHour = 60.0
             return wheelRPM * wheelCircumferenceCM * cmPerKm * minsPerHour
         }
-        return 0
+        return nil
     }
     
     open static func calculateCrankRPM(_ current: CyclingMeasurementData, previous: CyclingMeasurementData) -> Double? {
@@ -79,7 +79,7 @@ open class CyclingSerializer {
         if crankTimeSeconds > 0 {
             return Double(crankRevsDelta) / (crankTimeSeconds / 60)
         }
-        return 0
+        return nil
     }
     
     private static func deltaWithRollover<T: BinaryInteger>(_ new: T, old: T, max: T) -> T {
