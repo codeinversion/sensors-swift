@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33D6C86F20742F8E00AF47AA /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D6C86E20742F8E00AF47AA /* Timer.swift */; };
 		8D0B37891FE18EA20073A7F7 /* DeviceInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D278AC71E5D27FA0099085A /* DeviceInformationService.swift */; };
 		8D0B378A1FE18EA20073A7F7 /* Characteristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D278AC01E5D27FA0099085A /* Characteristic.swift */; };
 		8D0B378B1FE18EA20073A7F7 /* FitnessMachineSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6EC2F51F1409D3006FE4A0 /* FitnessMachineSerializer.swift */; };
@@ -101,6 +102,7 @@
 
 /* Begin PBXFileReference section */
 		26891D16EDF06F763956E66A /* Pods_SwiftySensorsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftySensorsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33D6C86E20742F8E00AF47AA /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = Sources/Timer.swift; sourceTree = "<group>"; };
 		3BFEC22A5C90E7F6BE33DBF1 /* Pods_SwiftySensors_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftySensors_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65316ED9EEE7FADC9F2AD916 /* Pods_SwiftySensors_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftySensors_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D616CD15F403945FCE530FF /* Pods-SwiftySensors iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftySensors iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftySensors iOS/Pods-SwiftySensors iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				8D278AC11E5D27FA0099085A /* CoreBluetooth.swift */,
 				8D278ACA1E5D27FA0099085A /* Operators.swift */,
 				8D278ACB1E5D27FA0099085A /* RSSINormalizer.swift */,
+				33D6C86E20742F8E00AF47AA /* Timer.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 				8D278ADF1E5D27FA0099085A /* HeartRateSerializer.swift in Sources */,
 				8D278ADB1E5D27FA0099085A /* CyclingSpeedCadenceService.swift in Sources */,
 				8D278AE11E5D27FA0099085A /* HeartRateService.swift in Sources */,
+				33D6C86F20742F8E00AF47AA /* Timer.swift in Sources */,
 				8D278AD11E5D27FA0099085A /* CoreBluetooth.swift in Sources */,
 				8D7843171F0FDB920047C7F1 /* FitnessMachineService.swift in Sources */,
 				8D278AE31E5D27FA0099085A /* Operators.swift in Sources */,
