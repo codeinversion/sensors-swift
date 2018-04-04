@@ -41,11 +41,40 @@ open class CyclingPowerService: Service, ServiceProtocol {
         
         public static let uuid: String = "2A63"
         
-        open private(set) var instantaneousPower: UInt?
+        open var dataTimeout: TimeInterval = 3.0
         
-        open private(set) var speedKPH: Double?
+        private var instantaneousPowerTimeout: Timer?
         
-        open private(set) var crankRPM: Double?
+        private var speedKPHTimeout: Timer?
+        
+        private var crankRPMTimeout: Timer?
+        
+        open private(set) var instantaneousPower: UInt? {
+            didSet {
+                instantaneousPowerTimeout?.invalidate()
+                instantaneousPowerTimeout = Timer.schedule(intervalFromNow: dataTimeout) { [weak self] _ in
+                    self?.instantaneousPower = 0
+                }
+            }
+        }
+        
+        open private(set) var speedKPH: Double? {
+            didSet {
+                speedKPHTimeout?.invalidate()
+                speedKPHTimeout = Timer.schedule(intervalFromNow: dataTimeout) { [weak self] _ in
+                    self?.speedKPH = 0
+                }
+            }
+        }
+        
+        open private(set) var crankRPM: Double? {
+            didSet {
+                crankRPMTimeout?.invalidate()
+                crankRPMTimeout = Timer.schedule(intervalFromNow: dataTimeout) { [weak self] _ in
+                    self?.crankRPM = 0
+                }
+            }
+        }
         
         open var wheelCircumferenceCM: Double = 213.3
         
