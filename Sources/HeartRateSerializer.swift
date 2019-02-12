@@ -34,7 +34,7 @@ open class HeartRateSerializer {
         case foot       = 6
     }
     
-    open static func readMeasurement(_ data: Data) -> MeasurementData {
+    public static func readMeasurement(_ data: Data) -> MeasurementData {
         var measurement = MeasurementData()
         
         let bytes = data.map { $0 }
@@ -67,13 +67,13 @@ open class HeartRateSerializer {
     }
     
     
-    open static func readSensorLocation(_ data: Data) -> BodySensorLocation? {
+    public static func readSensorLocation(_ data: Data) -> BodySensorLocation? {
         let bytes = data.map { $0 }
         if bytes.count == 0 { return nil }
         return BodySensorLocation(rawValue: bytes[0])
     }
     
-    open static func writeResetEnergyExpended() -> [UInt8] {
+    public static func writeResetEnergyExpended() -> [UInt8] {
         return [0x01]
     }
     

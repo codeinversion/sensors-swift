@@ -82,7 +82,7 @@ public extension UIControl {
         static var SignalDictionaryKey = "signals_signalKey"
     }
     
-    private static let eventToKey: [UIControlEvents: NSString] = [
+    private static let eventToKey: [UIControl.Event: NSString] = [
         .touchDown: "TouchDown",
         .touchDownRepeat: "TouchDownRepeat",
         .touchDragInside: "TouchDragInside",
@@ -98,7 +98,7 @@ public extension UIControl {
         .editingDidEnd: "EditingDidEnd",
         .editingDidEndOnExit: "EditingDidEndOnExit"]
     
-    private func getOrCreateSignalForUIControlEvent(_ event: UIControlEvents) -> Signal<(Void)> {
+    private func getOrCreateSignalForUIControlEvent(_ event: UIControl.Event) -> Signal<(Void)> {
         guard let key = UIControl.eventToKey[event] else {
             assertionFailure("Event type is not handled")
             return Signal()
@@ -115,7 +115,7 @@ public extension UIControl {
         }
     }
     
-    private func handleUIControlEvent(_ uiControlEvent: UIControlEvents) {
+    private func handleUIControlEvent(_ uiControlEvent: UIControl.Event) {
         getOrCreateSignalForUIControlEvent(uiControlEvent).fire(())
     }
     
@@ -176,7 +176,7 @@ public extension UIControl {
     }
 }
 
-extension UIControlEvents: Hashable {
+extension UIControl.Event: Hashable {
     public var hashValue: Int {
         return Int(self.rawValue)
     }

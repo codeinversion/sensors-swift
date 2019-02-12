@@ -64,7 +64,7 @@ open class FitnessMachineSerializer {
         }
     }
     
-    open static func readFeatures(_ data: Data) -> (machine: MachineFeatures, targetSettings: TargetSettingFeatures) {
+    public static func readFeatures(_ data: Data) -> (machine: MachineFeatures, targetSettings: TargetSettingFeatures) {
         let bytes = data.map { $0 }
         var rawMachine: UInt32 = UInt32(bytes[0])
         rawMachine |= UInt32(bytes[1]) << 8
@@ -114,7 +114,7 @@ open class FitnessMachineSerializer {
         public var statusString: String?
     }
     
-    open static func readTrainingStatus(_ data: Data) -> TrainingStatus {
+    public static func readTrainingStatus(_ data: Data) -> TrainingStatus {
         var status = TrainingStatus()
         let bytes = data.map { $0 }
         status.flags = TrainerStatusFlags(rawValue: bytes[0])
@@ -172,7 +172,7 @@ open class FitnessMachineSerializer {
         public var targetSpeedHigh: Float?
     }
     
-    open static func readControlPointResponse(_ data: Data) -> ControlPointResponse {
+    public static func readControlPointResponse(_ data: Data) -> ControlPointResponse {
         let bytes = data.map { $0 }
         var response = ControlPointResponse()
         if bytes.count > 2, bytes[0] == ControlOpCode.responseCode.rawValue {
@@ -206,7 +206,7 @@ open class FitnessMachineSerializer {
         }
     }
     
-    open static func setIndoorBikeSimulationParameters(_ parameters: IndoorBikeSimulationParameters) -> [UInt8] {
+    public static func setIndoorBikeSimulationParameters(_ parameters: IndoorBikeSimulationParameters) -> [UInt8] {
         // windSpeed = meters / second  res 0.001
         // grade = percentage           res 0.01
         // crr = unitless               res 0.0001
@@ -224,39 +224,39 @@ open class FitnessMachineSerializer {
         ]
     }
     
-    open static func requestControl() -> [UInt8] {
+    public static func requestControl() -> [UInt8] {
         return [
             ControlOpCode.requestControl.rawValue
         ]
     }
     
-    open static func reset() -> [UInt8] {
+    public static func reset() -> [UInt8] {
         return [
             ControlOpCode.reset.rawValue
         ]
     }
     
-    open static func startOrResume() -> [UInt8] {
+    public static func startOrResume() -> [UInt8] {
         return [
             ControlOpCode.startOrResume.rawValue
         ]
     }
     
-    open static func stop() -> [UInt8] {
+    public static func stop() -> [UInt8] {
         return [
             ControlOpCode.stopOrPause.rawValue,
             0x01
         ]
     }
     
-    open static func pause() -> [UInt8] {
+    public static func pause() -> [UInt8] {
         return [
             ControlOpCode.stopOrPause.rawValue,
             0x02
         ]
     }
     
-    open static func setTargetResistanceLevel(level: Double) -> [UInt8] {
+    public static func setTargetResistanceLevel(level: Double) -> [UInt8] {
         // level = unitless     res 0.1
         let levelN = Int16(level * 10)
         return [
@@ -265,21 +265,21 @@ open class FitnessMachineSerializer {
         ]
     }
     
-    open static func setTargetPower(watts: Int16) -> [UInt8] {
+    public static func setTargetPower(watts: Int16) -> [UInt8] {
         return [
             ControlOpCode.setTargetPower.rawValue,
             UInt8(watts & 0xFF), UInt8(watts >> 8 & 0xFF)
         ]
     }
     
-    open static func startSpinDownControl() -> [UInt8] {
+    public static func startSpinDownControl() -> [UInt8] {
         return [
             ControlOpCode.spinDownControl.rawValue,
             0x01
         ]
     }
     
-    open static func ignoreSpinDownControlRequest() -> [UInt8] {
+    public static func ignoreSpinDownControlRequest() -> [UInt8] {
         return [
             ControlOpCode.spinDownControl.rawValue,
             0x02
@@ -330,7 +330,7 @@ open class FitnessMachineSerializer {
     }
     
     
-    open static func readIndoorBikeData(_ data: Data) -> IndoorBikeData {
+    public static func readIndoorBikeData(_ data: Data) -> IndoorBikeData {
         var bikeData = IndoorBikeData()
         let bytes = data.map { $0 }
         var index: Int = 0
@@ -400,7 +400,7 @@ open class FitnessMachineSerializer {
         public var minimumIncrement: Double = 0
     }
     
-    open static func readSupportedResistanceLevelRange(_ data: Data) -> SupportedResistanceLevelRange {
+    public static func readSupportedResistanceLevelRange(_ data: Data) -> SupportedResistanceLevelRange {
         let bytes = data.map { $0 }
         var response = SupportedResistanceLevelRange()
         let value1: Int16 = Int16(bytes[0]) | Int16(bytes[1]) << 8
@@ -418,7 +418,7 @@ open class FitnessMachineSerializer {
         public var minimumIncrement: UInt16 = 0
     }
     
-    open static func readSupportedPowerRange(_ data: Data) -> SupportedPowerRange {
+    public static func readSupportedPowerRange(_ data: Data) -> SupportedPowerRange {
         let bytes = data.map { $0 }
         var response = SupportedPowerRange()
         response.minimumPower = Int16(bytes[0]) | Int16(bytes[1]) << 8
@@ -475,7 +475,7 @@ open class FitnessMachineSerializer {
         
     }
     
-    open static func readMachineStatus(_ data: Data) -> MachineStatusMessage {
+    public static func readMachineStatus(_ data: Data) -> MachineStatusMessage {
         var message = MachineStatusMessage()
         
         let bytes = data.map { $0 }
@@ -583,7 +583,8 @@ open class FitnessMachineSerializer {
         case .spinDownStatus:
             if bytes.count > 1 {
                 message.spinDownStatus = MachineStatusMessage.SpinDownStatus(rawValue: bytes[1])
-                if message.spinDownStatus == .success, bytes.count > 3 {
+                
+                if message.spinDownStatus == .success || message.spinDownStatus == .error, bytes.count > 3 {
                     // Milliseconds attached: convert to seconds
                     message.spinDownTime = TimeInterval(UInt16(bytes[2]) | UInt16(bytes[3]) << 8) / 1000
                 }

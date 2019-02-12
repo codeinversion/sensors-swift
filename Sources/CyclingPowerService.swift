@@ -21,6 +21,7 @@ open class CyclingPowerService: Service, ServiceProtocol {
     public static var characteristicTypes: Dictionary<String, Characteristic.Type> = [
         Measurement.uuid:       Measurement.self,
         Feature.uuid:           Feature.self,
+        Vector.uuid:            Vector.self,
         SensorLocation.uuid:    SensorLocation.self,
         ControlPoint.uuid:      ControlPoint.self
     ]
@@ -105,6 +106,38 @@ open class CyclingPowerService: Service, ServiceProtocol {
         
     }
     
+    //
+    // https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.characteristic.cycling_power_vector.xml
+    //
+    open class Vector: Characteristic {
+        
+        public static let uuid: String = "2A64"
+        
+        open private(set) var vectorData: CyclingPowerSerializer.VectorData? {
+            didSet {
+//                guard let current = measurementData else { return }
+//                instantaneousPower = UInt(current.instantaneousPower)
+//
+//                guard let previous = oldValue else { return }
+//                speedKPH = CyclingSerializer.calculateWheelKPH(current, previous: previous, wheelCircumferenceCM: wheelCircumferenceCM, wheelTimeResolution: 2048)
+//                crankRPM = CyclingSerializer.calculateCrankRPM(current, previous: previous)
+            }
+        }
+        
+        required public init(service: Service, cbc: CBCharacteristic) {
+            super.init(service: service, cbc: cbc)
+            
+            cbCharacteristic.notify(true)
+        }
+        
+        override open func valueUpdated() {
+            if let value = cbCharacteristic.value {
+                vectorData = CyclingPowerSerializer.readVector(value)
+            }
+            super.valueUpdated()
+        }
+        
+    }
     
     //
     // https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.characteristic.cycling_power_feature.xml

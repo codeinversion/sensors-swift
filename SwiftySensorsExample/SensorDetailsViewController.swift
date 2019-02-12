@@ -48,18 +48,18 @@ class SensorDetailsViewController: UIViewController {
     fileprivate func updateConnectButton() {
         switch sensor.peripheral.state {
         case .connected:
-            connectButton.setTitle("Connected", for: UIControlState())
+            connectButton.setTitle("Connected", for: UIControl.State())
             connectButton.isEnabled = true
         case .connecting:
-            connectButton.setTitle("Connecting", for: UIControlState())
+            connectButton.setTitle("Connecting", for: UIControl.State())
             connectButton.isEnabled = false
         case .disconnected:
-            connectButton.setTitle("Disconnected", for: UIControlState())
+            connectButton.setTitle("Disconnected", for: UIControl.State())
             connectButton.isEnabled = true
             
             rebuildData()
         case .disconnecting:
-            connectButton.setTitle("Disconnecting", for: UIControlState())
+            connectButton.setTitle("Disconnecting", for: UIControl.State())
             connectButton.isEnabled = false
         }
     }

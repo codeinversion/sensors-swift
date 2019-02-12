@@ -12,22 +12,6 @@ import Foundation
 /// :nodoc:
 open class CyclingPowerSerializer {
     
-    struct MeasurementFlags: OptionSet {
-        let rawValue: UInt16
-        
-        static let PedalPowerBalancePresent         = MeasurementFlags(rawValue: 1 << 0)
-        static let AccumulatedTorquePresent         = MeasurementFlags(rawValue: 1 << 2)
-        static let WheelRevolutionDataPresent       = MeasurementFlags(rawValue: 1 << 4)
-        static let CrankRevolutionDataPresent       = MeasurementFlags(rawValue: 1 << 5)
-        static let ExtremeForceMagnitudesPresent    = MeasurementFlags(rawValue: 1 << 6)
-        static let ExtremeTorqueMagnitudesPresent   = MeasurementFlags(rawValue: 1 << 7)
-        static let ExtremeAnglesPresent             = MeasurementFlags(rawValue: 1 << 8)
-        static let TopDeadSpotAnglePresent          = MeasurementFlags(rawValue: 1 << 9)
-        static let BottomDeadSpotAnglePresent       = MeasurementFlags(rawValue: 1 << 10)
-        static let AccumulatedEnergyPresent         = MeasurementFlags(rawValue: 1 << 11)
-        static let OffsetCompensationIndicator      = MeasurementFlags(rawValue: 1 << 12)
-    }
-    
     public struct Features: OptionSet {
         public let rawValue: UInt32
         
@@ -56,6 +40,32 @@ open class CyclingPowerSerializer {
         }
     }
     
+    public static func readFeatures(_ data: Data) -> Features {
+        let bytes = data.map { $0 }
+        var rawFeatures: UInt32 = 0
+        if bytes.count > 0 { rawFeatures |= UInt32(bytes[0]) }
+        if bytes.count > 1 { rawFeatures |= UInt32(bytes[1]) << 8 }
+        if bytes.count > 2 { rawFeatures |= UInt32(bytes[2]) << 16 }
+        if bytes.count > 3 { rawFeatures |= UInt32(bytes[3]) << 24 }
+        return Features(rawValue: rawFeatures)
+    }
+    
+    struct MeasurementFlags: OptionSet {
+        let rawValue: UInt16
+        
+        static let PedalPowerBalancePresent         = MeasurementFlags(rawValue: 1 << 0)
+        static let AccumulatedTorquePresent         = MeasurementFlags(rawValue: 1 << 2)
+        static let WheelRevolutionDataPresent       = MeasurementFlags(rawValue: 1 << 4)
+        static let CrankRevolutionDataPresent       = MeasurementFlags(rawValue: 1 << 5)
+        static let ExtremeForceMagnitudesPresent    = MeasurementFlags(rawValue: 1 << 6)
+        static let ExtremeTorqueMagnitudesPresent   = MeasurementFlags(rawValue: 1 << 7)
+        static let ExtremeAnglesPresent             = MeasurementFlags(rawValue: 1 << 8)
+        static let TopDeadSpotAnglePresent          = MeasurementFlags(rawValue: 1 << 9)
+        static let BottomDeadSpotAnglePresent       = MeasurementFlags(rawValue: 1 << 10)
+        static let AccumulatedEnergyPresent         = MeasurementFlags(rawValue: 1 << 11)
+        static let OffsetCompensationIndicator      = MeasurementFlags(rawValue: 1 << 12)
+    }
+    
     public struct MeasurementData: CyclingMeasurementData {
         public var timestamp: Double = 0
         public var instantaneousPower: Int16 = 0
@@ -81,18 +91,7 @@ open class CyclingPowerSerializer {
     }
     
     
-    open static func readFeatures(_ data: Data) -> Features {
-        let bytes = data.map { $0 }
-        var rawFeatures: UInt32 = 0
-        if bytes.count > 0 { rawFeatures |= UInt32(bytes[0]) }
-        if bytes.count > 1 { rawFeatures |= UInt32(bytes[1]) << 8 }
-        if bytes.count > 2 { rawFeatures |= UInt32(bytes[2]) << 16 }
-        if bytes.count > 3 { rawFeatures |= UInt32(bytes[3]) << 24 }
-        return Features(rawValue: rawFeatures)
-    }
-    
-    
-    open static func readMeasurement(_ data: Data) -> MeasurementData {
+    public static func readMeasurement(_ data: Data) -> MeasurementData {
         var measurement = MeasurementData()
         
         let bytes = data.map { $0 }
@@ -159,6 +158,76 @@ open class CyclingPowerSerializer {
         }
         measurement.timestamp = Date.timeIntervalSinceReferenceDate
         return measurement
+    }
+    
+    struct VectorFlags: OptionSet {
+        let rawValue: UInt8
+        
+        static let CrankRevolutionDataPresent   = VectorFlags(rawValue: 1 << 0)
+        static let FirstCrankAnglePresent       = VectorFlags(rawValue: 1 << 1)
+        static let InstantaneousForcesPresent   = VectorFlags(rawValue: 1 << 2)
+        static let InstantaneousTorquesPresent  = VectorFlags(rawValue: 1 << 3)
+    }
+    
+    public struct VectorData {
+        public enum MeasurementDirection {
+            case unknown
+            case tangentialComponent
+            case radialComponent
+            case lateralComponent
+        }
+        public var instantaneousMeasurementDirection: MeasurementDirection = .unknown
+        public var cumulativeCrankRevolutions: UInt16?
+        public var lastCrankEventTime: UInt16?
+        public var firstCrankAngle: UInt16?
+        public var instantaneousForce: [Int16]?
+        public var instantaneousTorque: [Double]?
+    }
+    
+    
+    
+    
+    public static func readVector(_ data: Data) -> VectorData {
+        var vector = VectorData()
+        
+        let bytes = data.map { $0 }
+        
+        
+        let flags = VectorFlags(rawValue: bytes[0])
+        
+        let measurementDirection = (bytes[0] & 0x30) >> 4
+        switch measurementDirection {
+        case 0:
+            vector.instantaneousMeasurementDirection = .unknown
+        case 1:
+            vector.instantaneousMeasurementDirection = .tangentialComponent
+        case 2:
+            vector.instantaneousMeasurementDirection = .radialComponent
+        case 3:
+            vector.instantaneousMeasurementDirection = .lateralComponent
+        default:
+            vector.instantaneousMeasurementDirection = .unknown
+        }
+        var index: Int = 1
+        
+        if flags.contains(.CrankRevolutionDataPresent) {
+            vector.cumulativeCrankRevolutions = UInt16(bytes[index++=]) | UInt16(bytes[index++=]) << 8
+            vector.lastCrankEventTime = UInt16(bytes[index++=]) | UInt16(bytes[index++=]) << 8
+        }
+        if flags.contains(.FirstCrankAnglePresent) {
+            vector.firstCrankAngle = UInt16(bytes[index++=]) | UInt16(bytes[index++=]) << 8
+        }
+        
+        // These two arrays are mutually exclusive
+        if flags.contains(.InstantaneousForcesPresent) {
+            
+        } else if flags.contains(.InstantaneousTorquesPresent) {
+            let torqueRaw = Int16(bytes[index++=]) | Int16(bytes[index++=]) << 8
+            let torque = Double(torqueRaw) / 32.0
+            print(torque)
+        }
+        
+        return vector
     }
     
 }

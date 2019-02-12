@@ -15,12 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // Customize what services you want to scan for
         SensorManager.instance.setServicesToScanFor([
             CyclingPowerService.self,
             CyclingSpeedCadenceService.self,
+            FitnessMachineService.self,
             HeartRateService.self])
         
         // Add additional services we want to have access to (but don't want to specifically scan for)

@@ -44,13 +44,13 @@ open class CyclingSpeedCadenceSerializer {
     }
     
     
-    open static func readFeatures(_ data: Data) -> Features {
+    public static func readFeatures(_ data: Data) -> Features {
         let bytes = data.map { $0 }
         let rawFeatures: UInt16 = UInt16(bytes[0]) | UInt16(bytes[1]) << 8
         return Features(rawValue: rawFeatures)
     }
     
-    open static func readMeasurement(_ data: Data) -> MeasurementData {
+    public static func readMeasurement(_ data: Data) -> MeasurementData {
         var measurement = MeasurementData()
         
         let bytes = data.map { $0 }

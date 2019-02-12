@@ -162,7 +162,7 @@ public class SensorManager: NSObject {
     // Private / Internal Classes, Properties and Constants
     //////////////////////////////////////////////////////////////////
     
-    fileprivate(set) var centralManager: CBCentralManager!
+    public fileprivate(set) var centralManager: CBCentralManager!
     
     internal class ServiceFactory {
         fileprivate(set) var serviceTypes = Dictionary<String, Service.Type>()
@@ -230,11 +230,13 @@ extension SensorManager {
         let options: [String: AnyObject] = [
             CBCentralManagerScanOptionAllowDuplicatesKey: aggressive as AnyObject
         ]
-        let serviceUUIDs = serviceFactory.servicesToDiscover
+        let serviceUUIDs = serviceFactory.servicesToDiscover.count > 0 ? serviceFactory.servicesToDiscover : nil
         centralManager.scanForPeripherals(withServices: serviceUUIDs, options: options)
         SensorManager.logSensorMessage?("SensorManager: Scanning for Services")
-        for peripheral in centralManager.retrieveConnectedPeripherals(withServices: serviceUUIDs) {
-            let _ = sensorForPeripheral(peripheral, create: true)
+        if let serviceUUIDs = serviceUUIDs {
+            for peripheral in centralManager.retrieveConnectedPeripherals(withServices: serviceUUIDs) {
+                let _ = sensorForPeripheral(peripheral, create: true)
+            }
         }
     }
     
@@ -248,8 +250,9 @@ extension SensorManager {
         }
     }
     
-    fileprivate func sensorForPeripheral(_ peripheral: CBPeripheral, create: Bool, advertisements: [CBUUID] = []) -> Sensor? {
+    fileprivate func sensorForPeripheral(_ peripheral: CBPeripheral, create: Bool, advertisements: [CBUUID] = [], data: [String: Any]? = nil) -> Sensor? {
         if let sensor = sensorsById[peripheral.identifier.uuidString] {
+            sensor.advertisementData = data
             return sensor
         }
         if !create {
@@ -257,6 +260,7 @@ extension SensorManager {
         }
         let sensor = SensorType.init(peripheral: peripheral, advertisements: advertisements)
         sensor.serviceFactory = serviceFactory
+        sensor.advertisementData = data
         sensorsById[peripheral.identifier.uuidString] = sensor
         onSensorDiscovered => sensor
         SensorManager.logSensorMessage?("SensorManager: Created Sensor for Peripheral: \(peripheral)")
@@ -309,7 +313,7 @@ extension SensorManager: CBCentralManagerDelegate {
     /// :nodoc:
     public func centralManager(_ manager: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         if let uuids = advertisementData[CBAdvertisementDataServiceUUIDsKey] as? [CBUUID] {
-            if let sensor = sensorForPeripheral(peripheral, create: true, advertisements: uuids) {
+            if let sensor = sensorForPeripheral(peripheral, create: true, advertisements: uuids, data: advertisementData) {
                 if RSSI.intValue < 0 {
                     sensor.rssi = RSSI.intValue
                     sensor.markSensorActivity()

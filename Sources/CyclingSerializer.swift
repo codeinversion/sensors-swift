@@ -42,12 +42,12 @@ open class CyclingSerializer {
         case chainRing      = 16
     }
     
-    open static func readSensorLocation(_ data: Data) -> SensorLocation? {
+    public static func readSensorLocation(_ data: Data) -> SensorLocation? {
         let bytes = data.map { $0 }
         return SensorLocation(rawValue: bytes[0])
     }
     
-    open static func calculateWheelKPH(_ current: CyclingMeasurementData, previous: CyclingMeasurementData, wheelCircumferenceCM: Double, wheelTimeResolution: Int) -> Double? {
+    public static func calculateWheelKPH(_ current: CyclingMeasurementData, previous: CyclingMeasurementData, wheelCircumferenceCM: Double, wheelTimeResolution: Int) -> Double? {
         guard let cwr1 = current.cumulativeWheelRevolutions else { return nil }
         guard let cwr2 = previous.cumulativeWheelRevolutions else { return nil }
         guard let lwet1 = current.lastWheelEventTime else { return nil }
@@ -66,7 +66,7 @@ open class CyclingSerializer {
         return nil
     }
     
-    open static func calculateCrankRPM(_ current: CyclingMeasurementData, previous: CyclingMeasurementData) -> Double? {
+    public static func calculateCrankRPM(_ current: CyclingMeasurementData, previous: CyclingMeasurementData) -> Double? {
         guard let ccr1 = current.cumulativeCrankRevolutions else { return nil }
         guard let ccr2 = previous.cumulativeCrankRevolutions else { return nil }
         guard let lcet1 = current.lastCrankEventTime else { return nil }

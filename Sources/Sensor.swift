@@ -42,6 +42,16 @@ open class Sensor: NSObject {
     /// Advertised UUIDs
     public let advertisements: [CBUUID]
     
+    /// Raw Advertisement Data
+    public internal(set) var advertisementData: [String: Any]? {
+        didSet {
+            onAdvertisementDataUpdated => advertisementData
+        }
+    }
+    
+    /// Advertisement Data Changed Signal
+    public let onAdvertisementDataUpdated = Signal<([String: Any]?)>()
+    
     /// Name Changed Signal
     public let onNameChanged = Signal<Sensor>()
     
