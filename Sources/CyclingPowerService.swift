@@ -41,7 +41,7 @@ open class CyclingPowerService: Service, ServiceProtocol {
     open class Measurement: Characteristic {
         
         public static let uuid: String = "2A63"
-
+        
         open private(set) var instantaneousPower: UInt?
         
         open private(set) var speedKPH: Double?
