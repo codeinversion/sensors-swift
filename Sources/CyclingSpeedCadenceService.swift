@@ -37,8 +37,6 @@ open class CyclingSpeedCadenceService: Service, ServiceProtocol {
         
         public static let uuid: String = "2A5B"
         
-        open var dataTimeout: TimeInterval = 3.0
-        
         open private(set) var speedKPH: Double?
         
         open private(set) var crankRPM: Double?
