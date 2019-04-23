@@ -66,14 +66,19 @@ open class FitnessMachineSerializer {
     
     public static func readFeatures(_ data: Data) -> (machine: MachineFeatures, targetSettings: TargetSettingFeatures) {
         let bytes = data.map { $0 }
-        var rawMachine: UInt32 = UInt32(bytes[0])
-        rawMachine |= UInt32(bytes[1]) << 8
-        rawMachine |= UInt32(bytes[2]) << 16
-        rawMachine |= UInt32(bytes[3]) << 24
-        var rawTargetSettings: UInt32 = UInt32(bytes[4])
-        rawTargetSettings |= UInt32(bytes[5]) << 8
-        rawTargetSettings |= UInt32(bytes[6]) << 16
-        rawTargetSettings |= UInt32(bytes[7]) << 24
+        guard bytes.isEmpty == false else { return (MachineFeatures(rawValue: 0), TargetSettingFeatures(rawValue: 0)) }
+        let machineBytes = bytes[0..<min(4, bytes.count)]
+        let targetSettingsBytes = bytes.count >= 4 ? bytes[4..<bytes.count] : []
+        // Reduces an array of bytes to a 32 bit raw value for machine/target setting features
+        let reducer = { (result: UInt32, item: (offset: Int, element: UInt8)) -> UInt32 in
+            if item.offset == 0 {
+                return UInt32(item.element)
+            }
+            let shift = item.offset * 8
+            return result | UInt32(item.element) << shift
+        }
+        let rawMachine = machineBytes.enumerated().reduce(0, reducer)
+        let rawTargetSettings = targetSettingsBytes.enumerated().reduce(0, reducer)
         return (MachineFeatures(rawValue: rawMachine), TargetSettingFeatures(rawValue: rawTargetSettings))
     }
     
