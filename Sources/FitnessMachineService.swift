@@ -120,13 +120,13 @@ open class FitnessMachineService: Service, ServiceProtocol {
         
         @discardableResult open func requestControl() -> [UInt8] {
             let bytes = FitnessMachineSerializer.requestControl()
-            cbCharacteristic.write(Data(bytes: bytes), writeType: .withResponse)
+            cbCharacteristic.write(Data(bytes), writeType: .withResponse)
             return bytes
         }
         
         @discardableResult open func startOrResume() -> [UInt8] {
             let bytes = FitnessMachineSerializer.startOrResume()
-            cbCharacteristic.write(Data(bytes: bytes), writeType: .withResponse)
+            cbCharacteristic.write(Data(bytes), writeType: .withResponse)
             return bytes
         }
         
@@ -144,7 +144,7 @@ open class FitnessMachineService: Service, ServiceProtocol {
                 return bytes
             }
             pendingTargetPower = watts
-            cbCharacteristic.write(Data(bytes: bytes), writeType: .withResponse)
+            cbCharacteristic.write(Data(bytes), writeType: .withResponse)
             
             return bytes
         }
@@ -164,7 +164,7 @@ open class FitnessMachineService: Service, ServiceProtocol {
             }
             pendingTargetResistanceLevel = level
             
-            cbCharacteristic.write(Data(bytes: bytes), writeType: .withResponse)
+            cbCharacteristic.write(Data(bytes), writeType: .withResponse)
             return bytes
         }
         fileprivate var pendingTargetSimParameters: FitnessMachineSerializer.IndoorBikeSimulationParameters?
@@ -183,19 +183,19 @@ open class FitnessMachineService: Service, ServiceProtocol {
             }
             pendingTargetSimParameters = params
             
-            cbCharacteristic.write(Data(bytes: bytes), writeType: .withResponse)
+            cbCharacteristic.write(Data(bytes), writeType: .withResponse)
             return bytes
         }
         
         @discardableResult open func startSpindownProcess() -> [UInt8] {
             let bytes = FitnessMachineSerializer.startSpinDownControl()
-            cbCharacteristic.write(Data(bytes: bytes), writeType: .withResponse)
+            cbCharacteristic.write(Data(bytes), writeType: .withResponse)
             return bytes
         }
         
         @discardableResult open func ignoreSpindownRequest() -> [UInt8] {
             let bytes = FitnessMachineSerializer.ignoreSpinDownControlRequest()
-            cbCharacteristic.write(Data(bytes: bytes), writeType: .withResponse)
+            cbCharacteristic.write(Data(bytes), writeType: .withResponse)
             return bytes
         }
     }

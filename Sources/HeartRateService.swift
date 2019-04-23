@@ -95,7 +95,7 @@ open class HeartRateService: Service, ServiceProtocol {
         }
         
         open func resetEnergyExpended() {
-            cbCharacteristic.write(Data(bytes: HeartRateSerializer.writeResetEnergyExpended()), writeType: .withResponse)
+            cbCharacteristic.write(Data(HeartRateSerializer.writeResetEnergyExpended()), writeType: .withResponse)
         }
         
         override open func valueUpdated() {

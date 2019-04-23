@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rj7-kd-hm8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rj7-kd-hm8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -119,7 +118,7 @@
             <objects>
                 <navigationController id="Rj7-kd-hm8" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yTQ-Wd-kbJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -201,47 +200,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characteristic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTf-SA-30i">
-                                <rect key="frame" x="16" y="72" width="343" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMI-Bs-co0">
-                                <rect key="frame" x="24" y="105" width="327" height="20.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6i-td-42U">
-                                <rect key="frame" x="16" y="629" width="343" height="30"/>
-                                <state key="normal" title="Read"/>
-                                <connections>
-                                    <action selector="readButtonHandler:" destination="2cY-C8-k6x" eventType="touchUpInside" id="oFz-y5-ptb"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Z6s-6B-Hz1">
-                                <rect key="frame" x="24" y="133.5" width="327" height="487.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="nVR-qo-Adg">
+                                <rect key="frame" x="24" y="72" width="327" height="587"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characteristic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTf-SA-30i">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMI-Bs-co0">
+                                        <rect key="frame" x="0.0" y="29.5" width="327" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Z6s-6B-Hz1">
+                                        <rect key="frame" x="0.0" y="59" width="327" height="450"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH8-wW-7iB">
+                                        <rect key="frame" x="0.0" y="518" width="327" height="30"/>
+                                        <state key="normal" title="Write Data"/>
+                                        <connections>
+                                            <action selector="writeButtonHandler:" destination="2cY-C8-k6x" eventType="touchUpInside" id="s3Y-ob-pD5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6i-td-42U">
+                                        <rect key="frame" x="0.0" y="557" width="327" height="30"/>
+                                        <state key="normal" title="Read"/>
+                                        <connections>
+                                            <action selector="readButtonHandler:" destination="2cY-C8-k6x" eventType="touchUpInside" id="oFz-y5-ptb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mTf-SA-30i" firstAttribute="trailing" secondItem="WhX-EA-Yxf" secondAttribute="trailingMargin" id="5er-yf-5uk"/>
-                            <constraint firstItem="imV-yD-Ggb" firstAttribute="top" secondItem="H6i-td-42U" secondAttribute="bottom" constant="8" id="93k-9Y-Ogk"/>
-                            <constraint firstItem="ZMI-Bs-co0" firstAttribute="leading" secondItem="WhX-EA-Yxf" secondAttribute="leadingMargin" constant="8" id="Cr6-QO-k9V"/>
-                            <constraint firstItem="mTf-SA-30i" firstAttribute="leading" secondItem="WhX-EA-Yxf" secondAttribute="leadingMargin" id="I3n-jF-I1g"/>
-                            <constraint firstItem="Z6s-6B-Hz1" firstAttribute="top" secondItem="ZMI-Bs-co0" secondAttribute="bottom" constant="8" id="NCs-Sd-8VC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZMI-Bs-co0" secondAttribute="trailing" constant="8" id="NIe-bT-Jks"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Z6s-6B-Hz1" secondAttribute="trailing" constant="8" id="Nz5-UI-keg"/>
-                            <constraint firstItem="mTf-SA-30i" firstAttribute="top" secondItem="8fQ-Xx-pYb" secondAttribute="bottom" constant="8" id="coe-CN-Z8I"/>
-                            <constraint firstItem="ZMI-Bs-co0" firstAttribute="top" secondItem="mTf-SA-30i" secondAttribute="bottom" constant="12" id="eNW-k2-DLJ"/>
-                            <constraint firstItem="Z6s-6B-Hz1" firstAttribute="leading" secondItem="WhX-EA-Yxf" secondAttribute="leadingMargin" constant="8" id="gWW-Ca-LdL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="H6i-td-42U" secondAttribute="trailing" id="giY-ia-6Eh"/>
-                            <constraint firstItem="H6i-td-42U" firstAttribute="leading" secondItem="WhX-EA-Yxf" secondAttribute="leadingMargin" id="gvc-XL-wsI"/>
-                            <constraint firstItem="H6i-td-42U" firstAttribute="top" secondItem="Z6s-6B-Hz1" secondAttribute="bottom" constant="8" id="hkR-5i-uI4"/>
+                            <constraint firstItem="nVR-qo-Adg" firstAttribute="leading" secondItem="WhX-EA-Yxf" secondAttribute="leadingMargin" constant="8" id="DSl-mU-Af6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nVR-qo-Adg" secondAttribute="trailing" constant="8" id="DeU-ZJ-1Fk"/>
+                            <constraint firstItem="nVR-qo-Adg" firstAttribute="top" secondItem="8fQ-Xx-pYb" secondAttribute="bottom" constant="8" id="dgQ-WG-lnv"/>
+                            <constraint firstItem="imV-yD-Ggb" firstAttribute="top" secondItem="nVR-qo-Adg" secondAttribute="bottom" constant="8" id="qFJ-8A-TOM"/>
                         </constraints>
                     </view>
                     <connections>

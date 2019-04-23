@@ -60,7 +60,7 @@ final public class Signal<T> {
     @discardableResult
     public func subscribe(with observer: AnyObject, callback: @escaping SignalCallback) -> SignalSubscription<T> {
         flushCancelledListeners()
-        let signalListener = SignalSubscription<T>(observer: observer, callback: callback);
+        let signalListener = SignalSubscription<T>(observer: observer, callback: callback)
         signalListeners.append(signalListener)
         return signalListener
     }
@@ -173,6 +173,12 @@ final public class Signal<T> {
     }
 }
 
+public extension Signal where T == Void {
+    func fire() {
+        fire(())
+    }
+}
+
 /// A SignalLister represenents an instance and its association with a `Signal`.
 final public class SignalSubscription<T> {
     public typealias SignalCallback = (T) -> Void
@@ -213,7 +219,7 @@ final public class SignalSubscription<T> {
     
     /// Tells the observer to sample received `Signal` data and only dispatch the latest data once the time interval 
     /// has elapsed. This is useful if the subscriber wants to throttle the amount of data it receives from the
-    /// `Singla`.
+    /// `Signal`.
     ///
     /// - parameter sampleInterval: The number of seconds to delay dispatch.
     /// - returns: Returns self so you can chain calls.

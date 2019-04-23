@@ -55,12 +55,13 @@ class SensorDetailsViewController: UIViewController {
             connectButton.isEnabled = false
         case .disconnected:
             connectButton.setTitle("Disconnected", for: UIControl.State())
-            connectButton.isEnabled = true
-            
+            connectButton.isEnabled = true            
             rebuildData()
         case .disconnecting:
             connectButton.setTitle("Disconnecting", for: UIControl.State())
             connectButton.isEnabled = false
+        @unknown default:
+            break
         }
     }
     

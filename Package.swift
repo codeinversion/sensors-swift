@@ -27,6 +27,6 @@ import PackageDescription
 let package = Package(
     name: "SwiftySensors",
     dependencies: [
-        .Package(url: "https://github.com/artman/Signals", Version(6, 0, 0))
+        .Package(url: "https://github.com/artman/Signals", Version(6, 1, 0))
     ]
 )
