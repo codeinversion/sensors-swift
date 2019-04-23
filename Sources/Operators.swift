@@ -12,12 +12,12 @@ import Foundation
 public extension SignedInteger {
     
     /// Increment this SignedInteger by 1
-    public mutating func increment() {
+    mutating func increment() {
         self = self.advanced(by: 1)
     }
     
     /// Decrement this SignedInteger by 1
-    public mutating func decrement() {
+    mutating func decrement() {
         self = self.advanced(by: -1)
     }
     

@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
     spec.name                   = 'SwiftySensors'
-    spec.version                = '1.0.0'
+    spec.version                = '1.1.0'
     spec.summary                = 'BLE Fitness Sensors Communication Utilities for iOS, macOS and tvOS'
 
     spec.homepage               = 'https://github.com/kinetic-fit/sensors-swift'
@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
                                     :tag => spec.version.to_s,
                                     :submodules => true }
     spec.source_files           = 'Sources/**/*.swift'
-    spec.swift_version          = '4.2'
+    spec.swift_version          = '5.0'
 
     spec.dependency             'Signals'
 

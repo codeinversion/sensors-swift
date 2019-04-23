@@ -339,6 +339,8 @@ extension SensorManager: CBCentralManagerDelegate {
             break
         case .poweredOn:
             stateUpdated()
+        @unknown default:
+            break
         }
         
         onBluetoothStateChange => CBCentralManagerState(rawValue: central.state.rawValue)!
