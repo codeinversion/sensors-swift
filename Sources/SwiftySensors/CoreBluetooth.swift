@@ -17,12 +17,12 @@ extension CBCharacteristic {
      - parameter enabled: Notification Flag
      */
     public func notify(_ enabled: Bool) {
-        service.peripheral.setNotifyValue(enabled, for: self)
+        service?.peripheral?.setNotifyValue(enabled, for: self)
     }
     
     /// Read the value of the Characteristic
     public func read() {
-        service.peripheral.readValue(for: self)
+        service?.peripheral?.readValue(for: self)
     }
     
     /**
