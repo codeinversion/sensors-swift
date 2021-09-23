@@ -275,7 +275,7 @@ extension Sensor: CBPeripheralDelegate {
     
     /// :nodoc:
     public func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        guard let service = services[characteristic.service.uuid.uuidString] else { return }
+        guard let service = services[characteristic.service?.uuid.uuidString ?? ""] else { return }
         guard let char = service.characteristics[characteristic.uuid.uuidString] else { return }
         if char.cbCharacteristic !== characteristic {
             char.cbCharacteristic = characteristic
@@ -286,7 +286,7 @@ extension Sensor: CBPeripheralDelegate {
     
     /// :nodoc:
     public func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
-        guard let service = services[characteristic.service.uuid.uuidString] else { return }
+        guard let service = services[characteristic.service?.uuid.uuidString ?? ""] else { return }
         guard let char = service.characteristics[characteristic.uuid.uuidString] else { return }
         if char.cbCharacteristic !== characteristic {
             char.cbCharacteristic = characteristic
