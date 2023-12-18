@@ -12,7 +12,7 @@ import CoreBluetooth
 /**
  The Service Protocol is used by the Sensor Manager to identify, organize and instantiate Services given a UUID string.
  */
-public protocol ServiceProtocol: class {
+public protocol ServiceProtocol: AnyObject {
     
     /// UUID string of the Service.
     static var uuid: String { get }
